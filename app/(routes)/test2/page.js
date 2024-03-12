@@ -143,24 +143,64 @@ export default function Test2() {
             borderRadius: "26.39px",
             height: "212px",
           }}
-          className="w-48 h-24 rounded-xl border-2 border-white flex flex-col items-center py-4 transition flex-shrink-0"
-        ></button>
+          className="w-48 h-24 rounded-xl border-2 border-white flex flex-col justify-between p-8 py-8 transition flex-shrink-0"
+        >
+          <p style={{ fontWeight: "500", fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7">
+            Edit <br /> Website
+          </p>
+          <p style={{ color: "#757575" }} className="text-xs text-left">
+            나의 웹사이트에 <br /> 새 정보를 등록해보세요
+          </p>
+        </button>
 
         <div className="flex-shrink-0 space-y-8">
           <div className="relative">
             <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} />
+            <div className="w-full h-full absolute top-0 p-8 py-8">
+              <p
+                style={{ fontWeight: "500", fontSize: "27px" }}
+                className="font-montserrat text-2xl text-left leading-7"
+              >
+                Visit <br /> Website
+              </p>
+              <p style={{ color: "#757575" }} className="text-xs text-left mt-3">
+                나의 연구실 웹사이트로 이동해보세요.
+              </p>
+            </div>
             <button className="absolute top-0 right-0 hover:opacity-80">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
           </div>
           <div className="relative">
             <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} />
+            <div className="w-full h-full absolute top-0 p-8 py-8">
+              <p
+                style={{ fontWeight: "500", fontSize: "27px" }}
+                className="font-montserrat text-2xl text-left leading-7"
+              >
+                Project <br /> Management
+              </p>
+              <p style={{ color: "#757575" }} className="text-xs text-left mt-3">
+                나의 연구실 웹사이트로 이동해보세요.
+              </p>
+            </div>
             <button className="absolute top-0 right-0 hover:opacity-80">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
           </div>
           <div className="relative">
-            <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} />
+            <Image src="/union-big.png" alt="Vercel Logo" className="" width={400} height={151} />
+            <div className="w-full h-full absolute top-0 p-8 py-8">
+              <p
+                style={{ fontWeight: "500", fontSize: "27px" }}
+                className="font-montserrat text-2xl text-left leading-7"
+              >
+                새롭게 등록된 <br /> 프로젝트를 확인해보세요
+              </p>
+              <p style={{ color: "#757575" }} className="text-xs text-left mt-3">
+                72개의 새로운 R&D 프로젝트 공고가 업데이트되었어요
+              </p>
+            </div>
             <button className="absolute top-0 right-0 hover:opacity-80">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
