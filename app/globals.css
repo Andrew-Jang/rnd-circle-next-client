@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.Montserrat { font-family: 'Montserrat', sans-serif;}
+.Spoqa { font-family: 'Spoqa Han Sans Neo', sans-serif;}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
