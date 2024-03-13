@@ -137,7 +137,7 @@ export default function Test2() {
         <Image src="/bar.png" alt="Vercel Logo" className="" width={50} height={150} />
         <div
           style={{ borderRadius: "15px", backgroundColor: color, width: 50, height }}
-          className="absolute bottom-0 w-full"
+          className="absolute bottom-0 w-full hover:opacity-70 cursor-pointer transition"
         ></div>
       </div>
       <p style={{ fontSize: "10px", color: "#525252" }} className="font-montserrat mt-1">
@@ -168,7 +168,7 @@ export default function Test2() {
           </button>
         </div>
         <div style={{ height: "548px" }} className="w-full h-96 bg-opacity-50 pt-8 pr-8 flex space-x-8">
-          <button
+          <div
             style={{
               backdropFilter: "blur(10px)",
               backgroundColor: "rgba(255, 255, 255, 0.5)",
@@ -189,16 +189,16 @@ export default function Test2() {
                 AI와 함께 나의 연구실 웹사이트에
                 <br /> 게시할 새로운 아티클을 생성해보세요
               </p>
-              <button className="bg-black rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium">
+              <button className="bg-black rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium hover:opacity-75 transition">
                 Create
               </button>
             </div>
             <div className="mt-8">
               <Image src="/article.png" alt="Vercel Logo" className="" width={290} height={370} />
             </div>
-          </button>
+          </div>
           <div className="space-y-8 w-full">
-            <button
+            <div
               style={{
                 backdropFilter: "blur(10px)",
                 backgroundColor: "rgba(255, 255, 255, 0.5)",
@@ -215,13 +215,13 @@ export default function Test2() {
                 <div className="flex items-center space-x-2">
                   <button
                     style={{ backgroundColor: "#000AFF" }}
-                    className="rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium"
+                    className="rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium hover:brightness-150 transition"
                   >
                     웹조회수
                   </button>
                   <button
                     style={{ backgroundColor: "#FBFBFB", borderColor: "#ECECEC", color: "#757575" }}
-                    className="bg-black rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium border"
+                    className="bg-black rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium border hover:brightness-110 transition"
                   >
                     매칭 제안수
                   </button>
@@ -239,7 +239,7 @@ export default function Test2() {
                 <Bar title={"MON"} height={"5rem"} color={"#000AFF"} />
                 <Bar title={"MON"} height={"7.7rem"} color={"#000000"} />
               </div>
-            </button>
+            </div>
             <button
               style={{
                 backdropFilter: "blur(10px)",
@@ -291,7 +291,7 @@ export default function Test2() {
                 나의 연구실 웹사이트로 이동해보세요.
               </p>
             </div>
-            <button className="absolute top-0 right-0 hover:opacity-80">
+            <button className="absolute top-0 right-0 hover:opacity-50">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
           </div>
@@ -308,7 +308,7 @@ export default function Test2() {
                 나의 연구실 웹사이트로 이동해보세요.
               </p>
             </div>
-            <button className="absolute top-0 right-0 hover:opacity-80">
+            <button className="absolute top-0 right-0 hover:opacity-50">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
           </div>
@@ -375,7 +375,7 @@ export default function Test2() {
               </div>
             </div>
 
-            <button className="absolute top-0 right-0 hover:opacity-80">
+            <button className="absolute top-0 right-0 hover:opacity-50">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
             </button>
           </div>
