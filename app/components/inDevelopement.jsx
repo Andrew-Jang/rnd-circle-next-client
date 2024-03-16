@@ -3,7 +3,7 @@ import React from "react";
 
 const InDevelopement = () => {
   return (
-    <div className="flex flex-col items-center py-20 tracking-tighter">
+    <div className="flex flex-col items-center py-20 ">
       <Image src="/timer.png" alt="Vercel Logo" className="" width={36} height={36} />
       <p className="text-xl font-medium mt-6">지금은 서비스 준비 중입니다.</p>
       <p className="text-xs text-gray757575 mt-4">

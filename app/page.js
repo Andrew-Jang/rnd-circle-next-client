@@ -18,8 +18,8 @@ export default function Home() {
         <h1 className="font-montserrat text-left text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl leading-tight font-medium">
           Welcome to RnDcircle
         </h1>
-        <h2 className="text-xs md:text-sm 2xl:text-lg font-medium tracking-tighter text-center mt-6 text-gray757575">
-          RnDcircle은 연구 성과가 세상에 더 잘 알려지고 빛을 발할 수 있도록
+        <h2 className="text-xs md:text-sm 2xl:text-lg font-medium text-center mt-6 text-gray757575">
+          RnDcircle은 연구 성과가 세상에 더 잘 알려지고 빛을 발할 수 있도록
           <br />
           연구 성과를 알리고 연구실과 기업의 매칭을 활성화시키는 ‘통합 R&D 지원 플랫폼’ 입니다
         </h2>

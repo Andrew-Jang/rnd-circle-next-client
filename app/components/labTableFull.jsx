@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import PaginationComponent from "./pagination";
 import Link from "next/link";
 import { Dropdown, Menu, Checkbox, Modal } from "antd";
-import MessageModal from "./messageModal";
+import MessageModal from "./modals/messageModal";
 
 const LabTableFull = () => {
   const researchLabs = [
@@ -143,13 +143,13 @@ const LabTableFull = () => {
               <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} />
               <p className="font-bold">{item.labs[0].name}</p>
             </div>
-            <div className="flex items-center w-60 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-60 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].affiliation}</p>
             </div>
-            <div className="flex items-center w-32 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-32 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].leader}</p>
             </div>
-            <div className="flex items-center w-72 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-72 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].focus}</p>
             </div>
             <div className="flex space-x-6">
@@ -205,13 +205,13 @@ const LabTableFull = () => {
       <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
         <p className="font-bold text-sm">연구설명</p>
       </div>
-      <div className="flex items-center w-60 justify-center flex-shrink-0 tracking-tighter">
+      <div className="flex items-center w-60 justify-center flex-shrink-0 ">
         <p className="font-bold text-sm">소속기관</p>
       </div>
-      <div className="flex items-center w-32 justify-center flex-shrink-0 tracking-tighter">
+      <div className="flex items-center w-32 justify-center flex-shrink-0 ">
         <p className="font-bold text-sm">지도교수</p>
       </div>
-      <div className="flex items-center w-72 justify-center flex-shrink-0 tracking-tighter">
+      <div className="flex items-center w-72 justify-center flex-shrink-0 ">
         <p className="font-bold text-sm">연구 분야</p>
       </div>
       <div className="flex space-x-6">
@@ -251,7 +251,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(1) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">순수수학</p>
+                  <p className="font-spoqa font-medium">순수수학</p>
                 </div>
               ),
               checked: false,
@@ -274,7 +274,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(2) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">응용수학</p>
+                  <p className="font-spoqa font-medium">응용수학</p>
                 </div>
               ),
               checked: false,
@@ -297,7 +297,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(3) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">통계학</p>
+                  <p className="font-spoqa font-medium">통계학</p>
                 </div>
               ),
               checked: false,
@@ -320,7 +320,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(4) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">계산수학</p>
+                  <p className="font-spoqa font-medium">계산수학</p>
                 </div>
               ),
               checked: false,
@@ -343,7 +343,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(5) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">확률론</p>
+                  <p className="font-spoqa font-medium">확률론</p>
                 </div>
               ),
               checked: false,
@@ -369,7 +369,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(1) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">가야대학교</p>
+                  <p className="font-spoqa font-medium">가야대학교</p>
                 </div>
               ),
               checked: false,
@@ -392,7 +392,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(2) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">가천대학교</p>
+                  <p className="font-spoqa font-medium">가천대학교</p>
                 </div>
               ),
               checked: false,
@@ -415,7 +415,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(3) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">가톨릭관동대학교</p>
+                  <p className="font-spoqa font-medium">가톨릭관동대학교</p>
                 </div>
               ),
               checked: false,
@@ -438,7 +438,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(4) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">가톨릭꽃동네대학교</p>
+                  <p className="font-spoqa font-medium">가톨릭꽃동네대학교</p>
                 </div>
               ),
               checked: false,
@@ -461,7 +461,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(5) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">가톨릭대학교</p>
+                  <p className="font-spoqa font-medium">가톨릭대학교</p>
                 </div>
               ),
               checked: false,
@@ -486,7 +486,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(1) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">서울</p>
+                  <p className="font-spoqa font-medium">서울</p>
                 </div>
               ),
               checked: false,
@@ -509,7 +509,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(2) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">경기</p>
+                  <p className="font-spoqa font-medium">경기</p>
                 </div>
               ),
               checked: false,
@@ -532,7 +532,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(3) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">인천</p>
+                  <p className="font-spoqa font-medium">인천</p>
                 </div>
               ),
               checked: false,
@@ -555,7 +555,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(4) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">강원</p>
+                  <p className="font-spoqa font-medium">강원</p>
                 </div>
               ),
               checked: false,
@@ -578,7 +578,7 @@ const LabTableFull = () => {
                   >
                     {checkedKeys.includes(5) && <div className="w-2 h-2 rounded-full bg-rndBlue"></div>}
                   </div>
-                  <p className="">충북</p>
+                  <p className="font-spoqa font-medium">충북</p>
                 </div>
               ),
               checked: false,

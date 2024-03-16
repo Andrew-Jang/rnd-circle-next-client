@@ -3,8 +3,8 @@ import Footer from "@/app/components/footer";
 import Menu from "@/app/components/menu";
 import LabTable from "@/app/components/labTable";
 import Header from "@/app/components/header";
-import ArticleCard from "./articleCard";
 import Link from "next/link";
+import ArticleCard from "./articleCard";
 
 export default function Lab() {
   const MiniCard = ({ icon, text, number, hasNew }) => (
@@ -44,7 +44,7 @@ export default function Lab() {
             <h1 className="font-montserrat text-left text-7xl leading-tight font-medium">
               Mechanic <br /> AI LAB / MAL
             </h1>
-            <h2 className="mt-2 text-xl font-medium tracking-tighter text-gray757575">
+            <h2 className="mt-2 text-xl font-medium  text-gray757575">
               한국대학교 인공지능대학 인공지능학과
             </h2>
 
@@ -110,7 +110,7 @@ export default function Lab() {
 
   const CardButton = ({ icon, title, subtitle }) => (
     <Link
-      href={"/project/detail"}
+      href={"/project/detail/government"}
       style={{
         backdropFilter: "blur(10px)",
         borderColor: "#ECECEC",
@@ -122,8 +122,8 @@ export default function Lab() {
         <Image src={icon} alt="Vercel Logo" className="" width={18} height={18} />
       </div>
       <div className="w-full text-left">
-        <p className="font-montserrat font-medium text-lg tracking-tighter">{title}</p>
-        <p className="mt-0.5 tracking-tighter text-gray757575 text-2xs">{subtitle}</p>
+        <p className="font-montserrat font-medium text-lg ">{title}</p>
+        <p className="mt-0.5  text-gray757575 text-2xs">{subtitle}</p>
       </div>
     </Link>
   );
@@ -145,7 +145,7 @@ export default function Lab() {
             <p style={{ fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7 font-medium">
               Edit <br /> Website
             </p>
-            <p className="text-xs text-left tracking-tighter text-gray757575">
+            <p className="text-xs text-left  text-gray757575">
               나의 웹사이트에 <br /> 새 정보를 등록해보세요
             </p>
           </button>
@@ -239,7 +239,7 @@ export default function Lab() {
               >
                 Visit <br /> Website
               </p>
-              <p className="text-xs text-left mt-3 tracking-tighter text-gray757575">
+              <p className="text-xs text-left mt-3  text-gray757575">
                 나의 연구실 웹사이트로 이동해보세요.
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function Lab() {
               >
                 Project <br /> Management
               </p>
-              <p className="text-xs text-left mt-3 tracking-tighter text-gray757575">
+              <p className="text-xs text-left mt-3  text-gray757575">
                 나의 연구실 웹사이트로 이동해보세요.
               </p>
             </div>

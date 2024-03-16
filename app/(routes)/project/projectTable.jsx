@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import ProjectCard from "./projectCard";
 
 const ProjectTable = () => {
   const TEMP = [
@@ -291,57 +292,24 @@ const ProjectTable = () => {
       } rounded-t-3xl border-2  w-full h-full bg-white hover:bg-gray-50 transition flex justify-center items-center space-x-2`}
       onClick={() => setCurrentTab(title)}
     >
-      <Image src={icon} alt="RnDCircle menu1" className="" width={18} height={18} priority />
+      <Image
+        src={currentTab === title ? `${icon}-on.png` : `${icon}.png`}
+        alt="RnDCircle menu1"
+        className=""
+        width={18}
+        height={18}
+        priority
+      />
       <p className={`text-sm font-medium ${currentTab === title ? "text-rndBlue" : "text-gray757575"}`}>{title}</p>
     </button>
   );
   const Tabs = () => (
     <div className="h-14 w-full flex">
-      <TabsButton icon="/project1.png" title="정부" />
-      <TabsButton icon="/project2.png" title="기업" />
-      <TabsButton icon="/project3.png" title="연구실" />
-      <TabsButton icon="/project4.png" title="관심 프로젝트" />
+      <TabsButton icon="/project1" title="정부" />
+      <TabsButton icon="/project2" title="기업" />
+      <TabsButton icon="/project3" title="연구실" />
+      <TabsButton icon="/project4" title="관심 프로젝트" />
     </div>
-  );
-
-  const Card = ({ item }) => (
-    <Link href={"/project/detail"}>
-      <button
-        style={{ borderColor: "#ECECEC" }}
-        className="rounded-3xl border-2 w-full flex flex-col items-start p-7 hover:bg-gray-100 transition"
-      >
-        <div className="flex flex-wrap gap-2">
-          {item.countdown.map((item) => (
-            <div className="px-3 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item}</div>
-          ))}
-        </div>
-        <p className="text-left leading-7 font-bold mt-3 tracking-tighter">{item.title}</p>
-        {item.companyName && (
-          <div className="flex space-x-2 items-center mt-3 h-8">
-            <div className="h-8 w-8 rounded-full border bg-white"></div>
-            <p className="text-xs font-medium">{item.companyName}</p>
-          </div>
-        )}
-        {item.labName && (
-          <div className="flex space-x-2 items-center mt-3 h-8">
-            <p className="text-xs font-medium">{item.labName}</p>
-          </div>
-        )}
-        <div className="flex flex-wrap mt-4 gap-2">
-          {item.tags.map((item) => (
-            <div
-              style={{
-                backgroundColor: item === "접수예정" ? "#CECECE" : "#FBFBFBE5",
-                color: item === "접수예정" ? "#ffffff" : "#525252",
-              }}
-              className="rounded-full px-3 py-1 border text-xs font-medium"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </button>
-    </Link>
   );
 
   const TableBody = () => (
@@ -350,12 +318,12 @@ const ProjectTable = () => {
       className="border-2 border-t-0 w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2"
     >
       {currentTab === "정부"
-        ? [...TEMP, ...TEMP].map((item) => <Card item={item} />)
+        ? [...TEMP, ...TEMP].map((item) => <ProjectCard item={item} />)
         : currentTab === "기업"
-        ? [...TEMP2, ...TEMP2].map((item) => <Card item={item} />)
+        ? [...TEMP2, ...TEMP2].map((item) => <ProjectCard item={item} />)
         : currentTab === "연구실"
-        ? [...TEMP3, ...TEMP3].map((item) => <Card item={item} />)
-        : [...TEMP4, ...TEMP4].map((item) => <Card item={item} />)}
+        ? [...TEMP3, ...TEMP3].map((item) => <ProjectCard item={item} />)
+        : [...TEMP4, ...TEMP4].map((item) => <ProjectCard item={item} />)}
     </div>
   );
 

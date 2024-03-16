@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import ChatMenu from "./headerMenu/chatMenu";
+import NotificationMenu from "./headerMenu/notificationMenu";
+import ProfileMenu from "./headerMenu/profileMenu";
 
 const Header = ({ authenticated = true }) => {
   return (
@@ -17,15 +20,9 @@ const Header = ({ authenticated = true }) => {
       </Link>
       {authenticated ? (
         <div className="flex -mr-2 -mb-2">
-          <button className="w-9 h-9 hover:bg-gray-100 transition rounded-full flex items-center justify-center">
-            <Image src="/menu1.png" alt="RnDCircle menu1" width={30} height={30} priority />
-          </button>
-          <button className="w-9 h-9 hover:bg-gray-100 transition rounded-full flex items-center justify-center">
-            <Image src="/menu2.png" alt="RnDCircle menu1" width={30} height={30} priority />
-          </button>
-          <button className="w-9 h-9 hover:bg-gray-100 transition rounded-full flex items-center justify-center">
-            <Image src="/menu3.png" alt="RnDCircle menu1" width={30} height={30} priority />
-          </button>
+          <ChatMenu />
+          <NotificationMenu />
+          <ProfileMenu />
         </div>
       ) : (
         <div className="flex -mr-2 -mb-2">

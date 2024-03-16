@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         montserrat: ["var(--font-montserrat)"],
+        spoqa: ["SpoqaHanSansNeo", "sans-serif"], // Use the same family name for simplicity
+        // spoqaMedium: ["SpoqaHanSansNeoMedium"],
+        // spoqaBold: ["SpoqaHanSansNeoBold"],
       },
       fontSize: {
         "2xs": "10px",

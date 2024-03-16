@@ -1,5 +1,5 @@
 "use client";
-import RequestModal from "@/app/components/requestModal";
+import RequestModal from "@/app/components/modals/requestModal";
 import { Modal } from "antd";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -52,7 +52,7 @@ const ArticleCard = () => {
           <p style={{ fontWeight: "500", fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7">
             Article
           </p>
-          <p className="text-xs text-left tracking-tighter text-gray757575">
+          <p className="text-xs text-left  text-gray757575">
             AI와 함께 나의 연구실 웹사이트에
             <br /> 게시할 새로운 아티클을 생성해보세요
           </p>

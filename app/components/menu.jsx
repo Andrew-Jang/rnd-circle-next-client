@@ -5,7 +5,7 @@ import React from "react";
 const Menu = () => {
   const content = (
     <div className="bg-rndBlue text-xs text-white tracking-white text-center p-2">
-      <p>
+      <p className="font-spoqa font-medium">
         지금 바로 맞춤형 협업 <br />
         제안서를 받아보세요.
       </p>
@@ -29,18 +29,22 @@ const Menu = () => {
       </Link>
 
       <Popover color="#1e40af" content={content} overlayClassName="custom-popover-class">
-        <button className="w-36 text-sm h-full font-montserrat font-semibold  flex items-center justify-center">
-          <div className="w-3 h-3 rounded-full bg-rndBlue"></div>
-        </button>
+        <Link className="w-36 h-full" href={"/collab"}>
+          <button className="w-36 text-sm h-full font-montserrat font-semibold  flex items-center justify-center">
+            <div className="w-3 h-3 rounded-full bg-rndBlue"></div>
+          </button>
+        </Link>
       </Popover>
       <Link className="w-36 h-full" href={"/project"}>
         <button className="w-36 text-sm h-full font-montserrat font-semibold hover:bg-gray-100 transition">
           Project
         </button>
       </Link>
-      <button className="w-36 text-sm h-full font-montserrat font-semibold hover:bg-gray-100 transition">
-        Register
-      </button>
+      <Link className="w-36 h-full" href={"/setting/register"}>
+        <button className="w-36 text-sm h-full font-montserrat font-semibold hover:bg-gray-100 transition">
+          Register
+        </button>
+      </Link>
     </div>
   );
 };

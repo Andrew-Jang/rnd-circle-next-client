@@ -9,6 +9,27 @@
   font-family: "Spoqa Han Sans Neo", sans-serif;
 }
 
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  src: url("./fonts/SpoqaHanSansNeo-Regular.ttf");
+  font-weight: 400; /* Normal */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  src: url("./fonts/SpoqaHanSansNeo-Medium.ttf");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo";
+  src: url("./fonts/SpoqaHanSansNeo-Bold.ttf");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 255, 255, 255;
@@ -169,4 +190,68 @@ body {
   content: none; /* Remove the check icon */
   background-color: #000aff; /* Blue background color */
   border-color: #000aff; /* Blue border color to match the background */
+}
+
+/* Custom styles for the disabled dropdown menu items */
+.ant-dropdown-menu-item-disabled.custom-disabled-item {
+  opacity: 1 !important; /* Ensure the item is not dimmed */
+  color: rgba(0, 0, 0, 1) !important; /* Set the text color to a standard value */
+  background-color: red !important; /* Set a white background */
+  cursor: pointer !important; /* Indicate the item is disabled */
+}
+
+/* Remove hover effect from all dropdown menu items */
+.ant-dropdown-menu-item:hover {
+  background-color: transparent !important; /* Remove any change in background */
+  color: inherit !important; /* Keep the text color the same */
+}
+
+/* If you also want to remove the hover effect from disabled items specifically */
+.ant-dropdown-menu-item-disabled:hover {
+  background-color: transparent !important; /* Remove any change in background */
+  color: inherit !important; /* Keep the text color the same */
+}
+
+/* Change border-radius of the Ant Design Dropdown menu */
+.custom-dropdown-radius .ant-dropdown-menu {
+  border-radius: 16px !important; /* Set to desired value */
+}
+
+.circle-animation-container {
+  position: relative;
+  /* width: 200px;
+  height: 200px; */
+}
+
+.center-circle {
+  position: relative;
+  width: 240px; /* Size of the center circle */
+  height: 240px; /* Size of the center circle */
+  border-radius: 50%;
+  backdrop-filter: blur(2px);
+  background-color: #ffffff90;
+  border-color: #ececec;
+  border-width: 2px;
+  z-index: 20;
+}
+
+.orbiting-circle {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 24px; /* Size of the orbiting circle */
+  height: 24px; /* Size of the orbiting circle */
+  background-color: #000aff;
+  border-radius: 50%;
+  animation: orbit 4s linear infinite;
+  transform: translate(50%, 50%);
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
 }

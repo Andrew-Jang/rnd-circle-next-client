@@ -28,7 +28,7 @@ export default function Signup() {
           </div>
         )}
       </div>
-      {hasError && <p className="text-2xs text-red-500 tracking-tighter">{error}</p>}
+      {hasError && <p className="text-2xs text-red-500 ">{error}</p>}
     </div>
   );
 
@@ -100,7 +100,7 @@ export default function Signup() {
               className="hidden"
             />
             <span className="radio-custom"></span>
-            <p className="ml-2 font-medium tracking-tighter">전체 동의</p>
+            <p className="ml-2 font-medium ">전체 동의</p>
           </label>
         </div>
 
@@ -115,7 +115,7 @@ export default function Signup() {
                 className="hidden"
               />
               <span className="radio-custom"></span>
-              <p className="ml-2 font-medium tracking-tighter">[필수] 알앤디써클 이용약관 동의</p>
+              <p className="ml-2 font-medium ">[필수] 알앤디써클 이용약관 동의</p>
               <div onClick={(e) => e.preventDefault()} className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2">
                 약관보기
               </div>
@@ -131,7 +131,7 @@ export default function Signup() {
                 className="hidden"
               />
               <span className="radio-custom"></span>
-              <p className="ml-2 font-medium tracking-tighter">[필수] 알앤디써클 개인정보처리방침 동의</p>
+              <p className="ml-2 font-medium ">[필수] 알앤디써클 개인정보처리방침 동의</p>
               <div onClick={(e) => e.preventDefault()} className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2">
                 약관보기
               </div>

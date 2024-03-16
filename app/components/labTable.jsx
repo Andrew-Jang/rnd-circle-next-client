@@ -3,7 +3,7 @@ import { Modal } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import MessageModal from "./messageModal";
+import MessageModal from "./modals/messageModal";
 
 const LabTable = () => {
   const researchLabs = [
@@ -141,13 +141,13 @@ const LabTable = () => {
               <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} />
               <p className="font-bold">{item.labs[0].name}</p>
             </div>
-            <div className="flex items-center w-60 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-60 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].affiliation}</p>
             </div>
-            <div className="flex items-center w-32 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-32 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].leader}</p>
             </div>
-            <div className="flex items-center w-72 justify-center flex-shrink-0 tracking-tighter">
+            <div className="flex items-center w-72 justify-center flex-shrink-0 ">
               <p className="font-medium text-2xs">{item.labs[0].focus}</p>
             </div>
             <div className="flex space-x-6">

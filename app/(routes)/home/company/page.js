@@ -41,7 +41,7 @@ export default function Company() {
         <div className="w-full h-full absolute flex">
           <div className="flex w-1/2 flex-col items-start flex-shrink-0">
             <h1 className="font-montserrat text-left text-7xl leading-tight font-medium">RnDcircle</h1>
-            <h2 className="mt-2 text-xl font-medium tracking-tighter text-gray757575">주식회사 알앤디써클</h2>
+            <h2 className="mt-2 text-xl font-medium  text-gray757575">주식회사 알앤디써클</h2>
 
             <div className="grid grid-cols-2 gap-5 p-8 mt-4">
               <MiniCard icon={"/card1.png"} text={"Message"} number={"0"} />
@@ -90,7 +90,7 @@ export default function Company() {
 
   const CardButton = ({ icon, title, subtitle }) => (
     <Link
-      href={"/project/detail"}
+      href={"/project/detail/company"}
       style={{
         backdropFilter: "blur(10px)",
         borderColor: "#ECECEC",
@@ -102,8 +102,8 @@ export default function Company() {
         <Image src={icon} alt="Vercel Logo" className="" width={18} height={18} />
       </div>
       <div className="w-full text-left">
-        <p className="font-montserrat font-medium text-lg tracking-tighter">{title}</p>
-        <p className="mt-0.5 tracking-tighter text-gray757575 text-2xs">{subtitle}</p>
+        <p className="font-montserrat font-medium text-lg ">{title}</p>
+        <p className="mt-0.5  text-gray757575 text-2xs">{subtitle}</p>
       </div>
     </Link>
   );
@@ -121,7 +121,7 @@ export default function Company() {
               >
                 Register <br /> Project
               </p>
-              <p className="text-xs text-left mt-3 tracking-tighter text-gray757575">새로운 프로젝트를 등록하세요</p>
+              <p className="text-xs text-left mt-3  text-gray757575">새로운 프로젝트를 등록하세요</p>
             </div>
             <button className="absolute top-0 right-0 hover:opacity-50">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
@@ -136,7 +136,7 @@ export default function Company() {
               >
                 Project <br /> Management
               </p>
-              <p className="text-xs text-left mt-3 tracking-tighter text-gray757575">저장한 프로젝트를 관리하세요</p>
+              <p className="text-xs text-left mt-3  text-gray757575">저장한 프로젝트를 관리하세요</p>
             </div>
             <button className="absolute top-0 right-0 hover:opacity-50">
               <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />

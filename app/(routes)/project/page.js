@@ -2,7 +2,7 @@
 import Footer from "@/app/components/footer";
 import Menu from "@/app/components/menu";
 import Header from "@/app/components/header";
-import ProjectSearch from "./search";
+import ProjectSearch from "./projectSearch";
 import ProjectTable from "./projectTable";
 import PaginationComponent from "@/app/components/pagination";
 
