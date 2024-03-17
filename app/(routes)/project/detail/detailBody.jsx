@@ -4,12 +4,10 @@ const DetailBody = ({ item }) => {
   return (
     <div
       style={{
-        backdropFilter: "blur(10px)",
         backgroundColor: "rgba(255, 255, 255, 0.5)",
-        borderColor: "#ECECEC",
         borderRadius: "26.39px",
       }}
-      className="w-full rounded-xl border-2 p-10 flex flex-col items-start mt-8"
+      className="w-full custom-border p-10 flex flex-col items-start mt-8 backdrop-blur"
     >
       {Object.entries(item.body).map(([key, value]) => (
         <div key={key} className="mt-6">

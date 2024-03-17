@@ -286,10 +286,9 @@ const ProjectTable = () => {
   const [currentTab, setCurrentTab] = useState("정부");
   const TabsButton = ({ title, icon }) => (
     <button
-      style={{ borderColor: "#ECECEC" }}
       className={`${
         currentTab === title ? "border-b-0" : ""
-      } rounded-t-3xl border-2  w-full h-full bg-white hover:bg-gray-50 transition flex justify-center items-center space-x-2`}
+      } rounded-t-3xl custom-border w-full h-full bg-white hover:bg-gray-50 transition flex justify-center items-center space-x-2`}
       onClick={() => setCurrentTab(title)}
     >
       <Image
@@ -313,10 +312,7 @@ const ProjectTable = () => {
   );
 
   const TableBody = () => (
-    <div
-      style={{ borderColor: "#ECECEC" }}
-      className="border-2 border-t-0 w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2"
-    >
+    <div className=" custom-border border-t-0 w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2">
       {currentTab === "정부"
         ? [...TEMP, ...TEMP].map((item) => <ProjectCard item={item} />)
         : currentTab === "기업"

@@ -156,11 +156,9 @@ const LabTableFull = () => {
               {!item.disableWeb ? (
                 <button
                   style={{
-                    backdropFilter: "blur(10px)",
-                    borderColor: "#ECECEC",
                     borderRadius: "26.39px",
                   }}
-                  className="border-2 rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition"
+                  className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
                 >
                   <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
                 </button>
@@ -169,15 +167,13 @@ const LabTableFull = () => {
               )}
               <button
                 style={{
-                  backdropFilter: "blur(10px)",
-                  borderColor: "#ECECEC",
                   borderRadius: "26.39px",
                 }}
                 onClick={(e) => {
                   showModal();
                   e.preventDefault();
                 }}
-                className="border-2 rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition"
+                className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
               >
                 <Image src="/chat.png" alt="Vercel Logo" className="" width={18} height={18} />
               </button>
@@ -190,6 +186,7 @@ const LabTableFull = () => {
           onCancel={handleCancel}
           footer={null} // This will remove the footer buttons
           closeIcon={<span />} // This will remove the close button
+          centered
         >
           <MessageModal />
         </Modal>
@@ -661,11 +658,9 @@ const LabTableFull = () => {
 
       <div
         style={{
-          backdropFilter: "blur(10px)",
-          borderColor: "#ECECEC",
           borderRadius: "26.39px",
         }}
-        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative border-2 p-8 pt-4"
+        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative custom-border p-8 pt-4 backdrop-blur"
       >
         <TableMenu />
         <div className="mt-4 w-full">

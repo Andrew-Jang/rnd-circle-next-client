@@ -22,16 +22,15 @@ const ActionButton = ({ icon, title }) => {
         onCancel={handleCancel}
         footer={null} // This will remove the footer buttons
         closeIcon={<span />} // This will remove the close button
+        centered
       >
         <MessageModal />
       </Modal>
       <button
         style={{
-          backdropFilter: "blur(10px)",
-          borderColor: "#ECECEC",
           borderRadius: "26.39px",
         }}
-        className="border-2 rounded-xl h-16 w-16 bg-white hover:bg-gray-100 transition space-y-1 flex flex-col items-center justify-center"
+        className="custom-border h-16 w-16 bg-white hover:bg-gray-100 transition space-y-1 flex flex-col items-center justify-center backdrop-blur"
         onClick={(e) => {
           title === "메세지" && showModal();
           e.preventDefault();

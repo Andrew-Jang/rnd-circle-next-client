@@ -22,6 +22,7 @@ const DetailFooter = ({ hasMessage }) => {
         onCancel={handleCancel}
         footer={null} // This will remove the footer buttons
         closeIcon={<span />} // This will remove the close button
+        centered
       >
         <MessageModal />
       </Modal>

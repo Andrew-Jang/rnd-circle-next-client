@@ -135,39 +135,37 @@ const LabTable = () => {
         <Link className="h-12 w-full" href="/lab/detail">
           <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
             <div style={{ width: "4.5rem" }} className="flex justify-center">
-              <div className="px-2 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item.category}</div>
+              <div className="px-2 py-0.5 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
             </div>
             <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
-              <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} />
+              <button onClick={(e) => e.preventDefault()}>
+                <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} unoptimized />
+              </button>
               <p className="font-bold">{item.labs[0].name}</p>
             </div>
             <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].affiliation}</p>
+              <p className="font-medium text-xs">{item.labs[0].affiliation}</p>
             </div>
             <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].leader}</p>
+              <p className="font-medium text-xs">{item.labs[0].leader}</p>
             </div>
             <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].focus}</p>
+              <p className="font-medium text-xs">{item.labs[0].focus}</p>
             </div>
             <div className="flex space-x-6">
               <button
                 style={{
-                  backdropFilter: "blur(10px)",
-                  borderColor: "#ECECEC",
                   borderRadius: "26.39px",
                 }}
-                className="border-2 rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition"
+                className="custom-border rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
               >
                 <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
               </button>
               <button
                 style={{
-                  backdropFilter: "blur(10px)",
-                  borderColor: "#ECECEC",
                   borderRadius: "26.39px",
                 }}
-                className="border-2 rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition"
+                className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
                 onClick={(e) => {
                   e.preventDefault();
                   showModal();
@@ -184,6 +182,7 @@ const LabTable = () => {
           onCancel={handleCancel}
           footer={null} // This will remove the footer buttons
           closeIcon={<span />} // This will remove the close button
+          centered
         >
           <MessageModal />
         </Modal>
@@ -202,19 +201,17 @@ const LabTable = () => {
     >
       <div
         style={{
-          backdropFilter: "blur(10px)",
-          borderColor: "#ECECEC",
           borderRadius: "26.39px",
         }}
-        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative border-2 p-8"
+        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative custom-border py-8 px-2 backdrop-blur"
       >
         <p
           style={{ fontWeight: "500", fontSize: "27px" }}
-          className="font-montserrat text-2xl text-left leading-7 mb-4"
+          className="font-montserrat text-2xl text-left leading-7 mb-4 px-6"
         >
           LAB
         </p>
-        <div className="w-full flex space-x-8 h-12">
+        <div className="w-full flex space-x-8 h-12 px-6">
           <div className="relative flex w-full items-center">
             <input
               style={{ backgroundColor: "#EBEBEB", fontWeight: "500" }}
@@ -233,8 +230,8 @@ const LabTable = () => {
           </button>
         </div>
 
-        <div className="mt-8 w-full">
-          {researchLabs.map((item, index) => (
+        <div style={{ maxHeight: "36rem" }} className="mt-8 w-full overflow-y-auto px-6">
+          {[...researchLabs, ...researchLabs].map((item, index) => (
             <Cell id={index} item={item} />
           ))}
         </div>

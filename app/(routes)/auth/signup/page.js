@@ -116,7 +116,10 @@ export default function Signup() {
               />
               <span className="radio-custom"></span>
               <p className="ml-2 font-medium ">[필수] 알앤디써클 이용약관 동의</p>
-              <div onClick={(e) => e.preventDefault()} className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2">
+              <div
+                onClick={(e) => e.preventDefault()}
+                className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
+              >
                 약관보기
               </div>
             </label>
@@ -132,7 +135,10 @@ export default function Signup() {
               />
               <span className="radio-custom"></span>
               <p className="ml-2 font-medium ">[필수] 알앤디써클 개인정보처리방침 동의</p>
-              <div onClick={(e) => e.preventDefault()} className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2">
+              <div
+                onClick={(e) => e.preventDefault()}
+                className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
+              >
                 약관보기
               </div>
             </label>
@@ -145,9 +151,8 @@ export default function Signup() {
   const Welcome = () => (
     <div style={{ minHeight: "calc(100svh - 12rem)" }} className="flex w-full items-center justify-center pt-12">
       <div
-        className="rounded-xl bg-white w-96 bg-opacity-50 flex flex-col p-8"
+        className="rounded-xl bg-white w-96 bg-opacity-50 flex flex-col p-8 backdrop-blur"
         style={{
-          backdropFilter: "blur(10px)",
           borderColor: "#ECECEC",
         }}
       >

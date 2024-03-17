@@ -66,15 +66,13 @@ const page = () => {
       <p className="text-xs text-gray757575 mb-2">{title}</p>
       {isBig ? (
         <textarea
-          style={{ borderColor: "##ECECEC" }}
           placeholder={placeholder}
-          className="bg-white rounded-xl border-2 outline-none min-h-40 p-4 text-xs w-full placeholder-black"
+          className="bg-white custom-border outline-none min-h-40 p-4 text-xs w-full placeholder-black"
         />
       ) : (
         <input
-          style={{ borderColor: "##ECECEC" }}
           placeholder={placeholder}
-          className="bg-white rounded-xl border-2 outline-none min-h-12 px-4 text-xs w-full placeholder-black"
+          className="bg-white custom-border outline-none min-h-12 px-4 text-xs w-full placeholder-black"
         />
       )}
     </div>
@@ -83,12 +81,10 @@ const page = () => {
     <div className="w-full">
       <div
         style={{
-          backdropFilter: "blur(10px)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
-          borderColor: "#ECECEC",
           borderRadius: "26.39px",
         }}
-        className="w-full rounded-xl border-2 p-8 flex flex-col items-start"
+        className="w-full custom-border p-8 flex flex-col items-start backdrop-blur"
       >
         <h1 className="font-medium mb-4">새 프로젝트 등록하기</h1>
         <div className="space-y-4 w-full">
@@ -169,6 +165,7 @@ const page = () => {
         onCancel={handleCancel}
         footer={null} // This will remove the footer buttons
         closeIcon={<span />} // This will remove the close button
+        centered
       >
         <RegisterModal />
       </Modal>

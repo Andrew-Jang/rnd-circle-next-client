@@ -35,24 +35,22 @@ const ArticleCard = () => {
         onCancel={handleCancel}
         footer={null} // This will remove the footer buttons
         closeIcon={<span />} // This will remove the close button
+        centered
       >
         <RequestModal />
       </Modal>
       <div
         style={{
-          backdropFilter: "blur(10px)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
-          borderColor: "#ECECEC",
           borderRadius: "26.39px",
-          // height: "212px",
         }}
-        className="w-72 h-full rounded-xl border-2 border-white flex flex-col justify-between p-8 py-8 transition flex-shrink-0"
+        className="w-72 h-full custom-border border-white flex flex-col justify-between p-8 py-8 transition flex-shrink-0 backdrop-blur"
       >
         <div className="space-y-6 flex flex-col items-start">
           <p style={{ fontWeight: "500", fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7">
             Article
           </p>
-          <p className="text-xs text-left  text-gray757575">
+          <p style={{ lineHeight: "1.1rem" }} className="text-xs text-left  text-gray757575">
             AI와 함께 나의 연구실 웹사이트에
             <br /> 게시할 새로운 아티클을 생성해보세요
           </p>

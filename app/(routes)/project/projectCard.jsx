@@ -13,10 +13,7 @@ const ProjectCard = ({ item }) => {
           : "/project/detail/government"
       }
     >
-      <button
-        style={{ borderColor: "#ECECEC" }}
-        className="rounded-3xl border-2 w-full flex flex-col items-start p-7 hover:bg-gray-100 transition"
-      >
+      <button className="rounded-3xl custom-border w-full flex flex-col items-start p-7 hover:bg-gray-100 transition">
         <div className="flex flex-wrap gap-2">
           {item.countdown.map((item) => (
             <div className="px-3 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item}</div>

@@ -255,3 +255,13 @@ body {
     transform: rotate(360deg) translateX(120px) rotate(-360deg);
   }
 }
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+
+.custom-border {
+  border-width: 2px;
+  border-color: #ececec;
+}

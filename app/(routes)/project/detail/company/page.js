@@ -24,12 +24,10 @@ export default function ProjectDetail() {
         <div className="mt-8">
           <div
             style={{
-              backdropFilter: "blur(10px)",
               backgroundColor: "rgba(255, 255, 255, 0.5)",
-              borderColor: "#ECECEC",
               borderRadius: "26.39px",
             }}
-            className="w-full rounded-xl border-2 p-10 flex flex-col items-start"
+            className="w-full custom-border p-10 flex flex-col items-start backdrop-blur"
           >
             <DetailHeader item={item} />
             <DetailBody item={item} />

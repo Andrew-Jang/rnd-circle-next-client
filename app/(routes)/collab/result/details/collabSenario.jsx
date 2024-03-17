@@ -7,10 +7,7 @@ import NextButton from "@/app/components/nextButton";
 
 const CollabSenario = () => {
   const Card = ({ item }) => (
-    <div
-      style={{ borderRadius: "26.39px", borderColor: "#ECECEC" }}
-      className="w-full p-8 rounded flex border-2 space-x-8"
-    >
+    <div style={{ borderRadius: "26.39px" }} className="w-full p-8 rounded flex custom-border space-x-8">
       <div className="w-80 flex-shrink-0">
         <Image src={item.img} className="" alt="Vercel Logo" width={484} height={233} />
         <div className="mt-4">

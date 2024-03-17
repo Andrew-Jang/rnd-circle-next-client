@@ -32,9 +32,8 @@ export default function Login() {
   const Welcome = () => (
     <div style={{ height: "calc(100svh - 12rem)" }} className="flex w-full items-center justify-center">
       <div
-        className="rounded-xl bg-white w-96 bg-opacity-50 flex flex-col p-8"
+        className="rounded-xl bg-white w-96 bg-opacity-50 flex flex-col p-8 backdrop-blur"
         style={{
-          backdropFilter: "blur(10px)",
           borderColor: "#ECECEC",
         }}
       >

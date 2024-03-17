@@ -9,13 +9,12 @@ export default function Company() {
   const MiniCard = ({ icon, text, number, hasNew }) => (
     <button
       style={{
-        backdropFilter: "blur(10px)",
         backgroundColor: "rgba(255, 255, 255, 0.5)",
-        borderColor: "#ECECEC",
+
         borderRadius: "26.39px",
         height: "90px",
       }}
-      className="w-28 h-24 rounded-xl border-2 border-white flex flex-col items-center py-4 hover:brightness-110 transition"
+      className="w-28 h-24 custom-border border-white flex flex-col items-center py-4 hover:brightness-110 transition backdrop-blur"
     >
       <div className="relative">
         <Image src={icon} alt="card1" className="" width={20} height={20} priority />
@@ -53,13 +52,11 @@ export default function Company() {
           <div className="w-1/2 h-full p-8 flex justify-end">
             <div
               style={{
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)", // Add this line
                 backgroundColor: "rgba(255, 255, 255, 0.5)",
-                borderColor: "#ECECEC",
+
                 borderRadius: "26.39px",
               }}
-              className="w-72 h-72 rounded-xl border-2 border-white flex flex-col items-center py-8 transition"
+              className="w-72 h-72 custom-border border-white flex flex-col items-center py-8 transition backdrop-blur"
             >
               <div className="w-16 h-16 rounded-full bg-white border"></div>
               <div className="px-2 py-0.5 text-white rounded-full mt-5 bg-rndBlue font-bold text-2xs">교수</div>
@@ -92,11 +89,9 @@ export default function Company() {
     <Link
       href={"/project/detail/company"}
       style={{
-        backdropFilter: "blur(10px)",
-        borderColor: "#ECECEC",
         borderRadius: "26.39px",
       }}
-      className="w-full h-24 rounded-xl border-2 border-white bg-white hover:bg-gray-100 transition flex items-center px-4 flex-shrink-0 space-x-4"
+      className="w-full h-24 custom-border border-white bg-white hover:bg-gray-100 transition flex items-center px-4 flex-shrink-0 space-x-4 backdrop-blur"
     >
       <div className="w-11 h-11 rounded-full flex-shrink-0 flex items-center justify-center bg-rndBlue">
         <Image src={icon} alt="Vercel Logo" className="" width={18} height={18} />

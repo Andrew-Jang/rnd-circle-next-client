@@ -6,9 +6,8 @@ export default function Home() {
   const Welcome = () => (
     <div className="flex w-full items-center justify-center">
       <div
-        className="rounded-full bg-white w-96 h-96 bg-opacity-50 flex flex-col items-center justify-center"
+        className="rounded-full bg-white w-96 h-96 bg-opacity-50 flex flex-col items-center justify-center backdrop-blur custom-border"
         style={{
-          backdropFilter: "blur(10px)",
           borderColor: "#ECECEC",
           width: "auto",
           height: "calc(100svh - 10rem)",
