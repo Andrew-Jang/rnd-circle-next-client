@@ -48,10 +48,10 @@ export default function ProjectDetail() {
         backgroundRepeat: "no-repeat",
         maxWidth: "1920px",
       }}
-      className="w-full flex justify-center bg-gradient-to-br relative mt-8"
+      className="w-full flex justify-center bg-gradient-to-br relative mt-24"
     >
       <div className="max-w-screen-xl w-full h-full">
-        <p className="text-3xl text-left leading-7 font-medium">
+        <p className="text-3xl text-left leading-7">
           관련 <br />
           프로젝트
         </p>

@@ -13,10 +13,7 @@ const NotificationMenu = () => {
       <div className="space-y-1">
         <div className="items-center inline-block text-xs font-medium tracking-tight break-keep">
           <p className="inline">{title}</p>
-          <p style={{ color: "#B7B7B7" }} className="inline">
-            {" "}
-            이 협업을 요청하였습니다.
-          </p>
+          <p className="inline text-gray757575"> 이 협업을 요청하였습니다.</p>
         </div>
         <p style={{ color: "#B7B7B7" }} className="text-2xs">
           {time}
@@ -27,7 +24,9 @@ const NotificationMenu = () => {
   const items = [
     {
       key: "1",
-      label: <div className=" w-64 h-12 flex items-center justify-center font-medium text-sm border-b font-spoqa">알림</div>,
+      label: (
+        <div className=" w-64 h-12 flex items-center justify-center font-medium text-sm border-b font-spoqa">알림</div>
+      ),
     },
 
     {
@@ -36,14 +35,6 @@ const NotificationMenu = () => {
         <div className="font-spoqa">
           <Cell title="주식회사 알앤디써클" text="안녕하세요." time="28분 전" />
           <Cell title="Geometry Research Ceneer" text="함께 협업진행하면 좋을 것 같습니다." time="54분 전" />
-        </div>
-      ),
-    },
-    {
-      key: "3",
-      label: (
-        <div className=" w-64 pt-4 pb-3 flex items-center justify-center font-medium text-2xs text-gray757575 tracking-tight border-t font-spoqa">
-          받은 메시지 전체 보기
         </div>
       ),
     },

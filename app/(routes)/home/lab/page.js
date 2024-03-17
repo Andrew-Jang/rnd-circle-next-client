@@ -5,6 +5,8 @@ import LabTable from "@/app/components/labTable";
 import Header from "@/app/components/header";
 import Link from "next/link";
 import ArticleCard from "./articleCard";
+import ProfileCard from "../profileCard";
+import HomeProjectCard from "../homeProjectCard";
 
 export default function Lab() {
   const MiniCard = ({ icon, text, number, hasNew }) => (
@@ -55,48 +57,12 @@ export default function Lab() {
             </div>
           </div>
           <div className="w-1/2 h-full p-8 flex justify-end">
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.5)",
-                borderRadius: "26.39px",
-              }}
-              className="w-72 h-72 custom-border border-white flex flex-col items-center py-8 transition backdrop-blur"
-            >
-              <div className="w-16 h-16 rounded-full bg-white border"></div>
-              <div className="px-2 py-0.5 text-white rounded-full mt-5 bg-rndBlue font-bold text-2xs">교수</div>
-              <div className="mt-1" style={{ fontWeight: "500" }}>
-                이한국
-              </div>
-              <div className="text-xs mt-3 text-gray757575">한국대학교 인공지능대학</div>
-              <div className="text-xs flex items-center space-x-1 mt-1 text-gray757575">
-                <Image src="/pin.png" alt="RnDCircle menu1" className="" width={15} height={15} unoptimized />
-                <label style={{ height: "14px" }}>Seoul, Republic of Korea</label>
-              </div>
-              <div className="space-x-2 flex items-center mt-4">
-                <button className="border px-2 py-1 rounded-full font-montserrat bg-white text-xs flex items-center space-x-2 hover:brightness-125 transition text-gray757575 font-medium">
-                  <Image
-                    src="/edit.png"
-                    alt="RnDCircle menu1"
-                    className="object-contain"
-                    width={17}
-                    height={17}
-                    unoptimized
-                  />
-                  <p>Edit</p>
-                </button>
-                <button className="border px-2 py-1 rounded-full font-montserrat bg-white text-xs flex items-center space-x-2 hover:brightness-125 transition text-gray757575 font-medium">
-                  <Image
-                    src="/setting.png"
-                    alt="RnDCircle menu1"
-                    className="object-contain"
-                    width={17}
-                    height={17}
-                    unoptimized
-                  />
-                  <p>Setting</p>
-                </button>
-              </div>
-            </div>
+            <ProfileCard
+              title={"교수"}
+              name={"이한국"}
+              desc={"한국대학교 인공지능대학"}
+              address={"Seoul, Republic of Korea"}
+            />
           </div>
         </div>
       </div>
@@ -247,40 +213,7 @@ export default function Lab() {
         <div className="flex-shrink-0 space-y-6">
           <WavvyCard title1={"Visit"} title2={"Website"} subtitle={"나의 연구실 웹사이트로 이동해보세요"} />
           <WavvyCard title1={"Project"} title2={"Management"} subtitle={"연구실의 프로젝트를 관리하세요"} />
-          <div className="relative">
-            <Image src="/union-big.png" alt="Vercel Logo" className="" width={400} height={151} unoptimized />
-            <div className="w-full h-full absolute top-0 p-8 py-8 flex flex-col justify-between">
-              <div>
-                <p
-                  style={{ fontWeight: "500", fontSize: "27px" }}
-                  className="font-montserrat text-2xl text-left leading-7 font-medium"
-                >
-                  새롭게 등록된 <br /> 프로젝트를 확인해보세요
-                </p>
-                <p className="text-xs text-left mt-6 text-gray757575">
-                  72개의 새로운 R&D 프로젝트 공고가 업데이트되었어요
-                </p>
-              </div>
-
-              <div className="space-y-5">
-                <CardButton
-                  icon="/cap.png"
-                  title="Quantum Innovation Lab"
-                  subtitle="서울과학기술대학교 양자기술 글로벌 혁신 기술 연구실"
-                />
-                <CardButton
-                  icon="/bank.png"
-                  title="2024 GNP"
-                  subtitle="2024년도 차세대 원자력 정책센터 신규과제 공고"
-                />
-              </div>
-            </div>
-            <Link href={"/project"}>
-              <button className="absolute top-0 right-0 hover:opacity-50">
-                <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
-              </button>
-            </Link>
-          </div>
+          <HomeProjectCard />
         </div>
       </div>
     </div>

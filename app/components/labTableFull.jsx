@@ -123,6 +123,8 @@ const LabTableFull = () => {
 
   const Cell = ({ item }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [bookmarkChecked, setBookmarkChecked] = useState(false);
+
     const showModal = () => {
       setIsModalOpen(true);
     };
@@ -137,20 +139,34 @@ const LabTableFull = () => {
         <Link className="h-12 w-full" href={"/lab/detail"}>
           <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
             <div style={{ width: "4.5rem" }} className="flex justify-center">
-              <div className="px-2 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item.category}</div>
+              <div className="px-2 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
             </div>
             <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
-              <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} />
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setBookmarkChecked(!bookmarkChecked);
+                }}
+              >
+                <Image
+                  src={bookmarkChecked ? "/bookmark-filled.png" : "/bookmark.png"}
+                  alt="Vercel Logo"
+                  className=""
+                  width={16}
+                  height={16}
+                  unoptimized
+                />
+              </button>
               <p className="font-bold">{item.labs[0].name}</p>
             </div>
             <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].affiliation}</p>
+              <p className="font-medium text-xs">{item.labs[0].affiliation}</p>
             </div>
             <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].leader}</p>
+              <p className="font-medium text-xs">{item.labs[0].leader}</p>
             </div>
             <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-              <p className="font-medium text-2xs">{item.labs[0].focus}</p>
+              <p className="font-medium text-xs">{item.labs[0].focus}</p>
             </div>
             <div className="flex space-x-6">
               {!item.disableWeb ? (
@@ -158,7 +174,7 @@ const LabTableFull = () => {
                   style={{
                     borderRadius: "26.39px",
                   }}
-                  className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
+                  className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
                 >
                   <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
                 </button>
@@ -173,7 +189,7 @@ const LabTableFull = () => {
                   showModal();
                   e.preventDefault();
                 }}
-                className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
+                className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
               >
                 <Image src="/chat.png" alt="Vercel Logo" className="" width={18} height={18} />
               </button>
@@ -197,23 +213,23 @@ const LabTableFull = () => {
   const TableMenu = ({ item }) => (
     <div className="h-12 flex items-center px-4 rounded-lg cursor-pointer">
       <div style={{ width: "4.5rem" }} className="flex justify-center">
-        <div className="font-bold text-sm">카테고리</div>
+        <div className="font-medium text-sm">카테고리</div>
       </div>
       <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
-        <p className="font-bold text-sm">연구설명</p>
+        <p className="font-medium text-sm">연구실명</p>
       </div>
       <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-        <p className="font-bold text-sm">소속기관</p>
+        <p className="font-medium text-sm">소속기관</p>
       </div>
       <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-        <p className="font-bold text-sm">지도교수</p>
+        <p className="font-medium text-sm">지도교수</p>
       </div>
       <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-        <p className="font-bold text-sm">연구 분야</p>
+        <p className="font-medium text-sm">연구 분야</p>
       </div>
       <div className="flex space-x-6">
-        <p className="font-bold text-sm px-3.5">웹</p>
-        <p className="font-bold text-sm px-3.5">연락</p>
+        <p className="font-medium text-sm w-12">웹</p>
+        <p className="font-medium text-sm w-12">연락</p>
       </div>
     </div>
   );
@@ -235,7 +251,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(1)}
-                  className={`flex space-x-2 w-24 ${
+                  className={`flex space-x-1.5 py-1 w-24 ${
                     checkedKeys.includes(1) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -258,7 +274,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(2)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(2) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -281,7 +297,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(3)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(3) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -304,7 +320,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(4)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(4) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -327,7 +343,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(5)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(5) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -353,7 +369,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(1)}
-                  className={`flex space-x-2 w-40 ${
+                  className={`flex space-x-1.5 py-1 w-40 ${
                     checkedKeys.includes(1) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -376,7 +392,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(2)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(2) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -399,7 +415,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(3)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(3) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -422,7 +438,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(4)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(4) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -445,7 +461,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(5)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(5) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -470,7 +486,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(1)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(1) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -493,7 +509,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(2)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(2) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -516,7 +532,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(3)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(3) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -539,7 +555,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(4)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(4) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -562,7 +578,7 @@ const LabTableFull = () => {
               label: (
                 <div
                   onClick={() => toggleChecked(5)}
-                  className={`flex space-x-2 ${
+                  className={`flex space-x-1.5 py-1 ${
                     checkedKeys.includes(5) ? "text-rndBlue font-medium text-xs" : "font-medium text-xs text-gray757575"
                   }`}
                 >
@@ -607,7 +623,7 @@ const LabTableFull = () => {
             // e.preventDefault();
             setDropdownVisible(!dropdownVisible);
           }}
-          className="px-2 py-1 text-gray757575 text-xs tracking-tight flex-shrink-0 rounded font-medium flex items-center bg-white bg-opacity-50 hover:bg-opacity-100 transition"
+          className="px-2 py-1 text-gray757575 text-xs tracking-tight flex-shrink-0 rounded-lg custom-border font-medium flex items-center bg-white bg-opacity-50 hover:bg-opacity-100 transition"
         >
           <div className="flex space-x-1">
             <p>{title}</p>
@@ -636,7 +652,7 @@ const LabTableFull = () => {
             style={{ borderRadius: "14px" }}
             className="w-9 h-9 absolute right-4 transition flex items-center justify-center"
           >
-            <Image src="/search.png" alt="Vercel Logo" className="" width={20} height={20} />
+            <Image src="/search.png" alt="Vercel Logo" className="" width={20} height={20} unoptimized />
           </button>
         </div>
       </div>

@@ -36,7 +36,7 @@ const ActionButton = ({ icon, title }) => {
           e.preventDefault();
         }}
       >
-        <Image src={icon} alt="Vercel Logo" className="" width={16} height={16} />
+        <Image src={icon} alt="Vercel Logo" className="" width={16} height={16} unoptimized />
         <p className="text-2xs font-medium">{title}</p>
       </button>
     </>

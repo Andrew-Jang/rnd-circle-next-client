@@ -121,6 +121,7 @@ const LabTable = () => {
 
   const Cell = ({ item }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [bookmarkChecked, setBookmarkChecked] = useState(false);
     const showModal = () => {
       setIsModalOpen(true);
     };
@@ -138,8 +139,20 @@ const LabTable = () => {
               <div className="px-2 py-0.5 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
             </div>
             <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
-              <button onClick={(e) => e.preventDefault()}>
-                <Image src="/bookmark.png" alt="Vercel Logo" className="" width={16} height={16} unoptimized />
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  setBookmarkChecked(!bookmarkChecked);
+                }}
+              >
+                <Image
+                  src={bookmarkChecked ? "/bookmark-filled.png" : "/bookmark.png"}
+                  alt="Vercel Logo"
+                  className=""
+                  width={16}
+                  height={16}
+                  unoptimized
+                />
               </button>
               <p className="font-bold">{item.labs[0].name}</p>
             </div>

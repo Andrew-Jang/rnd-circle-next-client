@@ -1,6 +1,7 @@
 "use client";
 import { Dropdown } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const ProjectSearch = () => {
@@ -393,7 +394,8 @@ const ProjectSearch = () => {
           onClick={(e) => {
             setDropdownVisible(!dropdownVisible);
           }}
-          className="px-2 py-1 text-gray757575 text-xs tracking-tight flex-shrink-0 font-medium flex items-center bg-white bg-opacity-50 hover:bg-opacity-100 transition border rounded-lg"
+          style={{ borderWidth: "2px" }}
+          className="px-2 py-1 text-gray757575 text-xs tracking-tight flex-shrink-0 flex items-center bg-white bg-opacity-50 hover:bg-opacity-100 transition border rounded-lg"
         >
           <div className="flex space-x-1">
             <p>{title}</p>
@@ -419,9 +421,12 @@ const ProjectSearch = () => {
           <Image src="/search.png" alt="Vercel Logo" className="" width={20} height={20} />
         </button>
       </div>
-      <button className="px-6 h-full flex items-center justify-center bg-black font-montserrat text-white font-bold text-xs rounded-full hover:bg-opacity-80 transition flex-shrink-0">
+      <Link
+        href="/setting/register"
+        className="px-6 h-full flex items-center justify-center bg-black font-montserrat text-white font-bold text-xs rounded-full hover:bg-opacity-80 transition flex-shrink-0"
+      >
         프로젝트 등록하기
-      </button>
+      </Link>
     </div>
   );
   const Filters = () => (

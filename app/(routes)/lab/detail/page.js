@@ -30,7 +30,7 @@ export default function Lab() {
           >
             <div className="flex w-full justify-between">
               <div className="space-y-4 flex flex-col items-start">
-                <div className="px-2 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item.category}</div>
+                <div className="px-2 py-0.5 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
                 <p className="text-3xl text-left leading-7 font-medium">{item.title}</p>
                 <p className="text-sm text-left  text-gray757575">{item.subtitle}</p>
               </div>
@@ -40,13 +40,13 @@ export default function Lab() {
               </div>
             </div>
 
-            <div className="mt-20">
+            <div className="mt-16">
               <p className="text-lg  text-left leading-7 font-medium">주요 연구 영역</p>
               <div className="flex flex-wrap gap-2 max-w-2xl mt-6">
                 {item.area.map((item) => (
                   <div
                     style={{ backgroundColor: "#FBFBFBE5", color: "#525252" }}
-                    className="rounded-full px-3 py-0.5 border text-xs font-medium"
+                    className="rounded-full px-3 py-0.5 border text-2xs font-medium"
                   >
                     {item}
                   </div>
@@ -60,7 +60,7 @@ export default function Lab() {
             </div>
             <div className="mt-10">
               <p className="text-lg  text-left leading-7 font-medium">지도교수 정보</p>
-              <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 mt-6 text-xs">
+              <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 mt-6 text-xs leading-5">
                 {item.info}
               </div>
             </div>

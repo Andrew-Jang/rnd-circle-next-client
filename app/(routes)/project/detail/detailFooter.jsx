@@ -24,7 +24,7 @@ const DetailFooter = ({ hasMessage }) => {
         closeIcon={<span />} // This will remove the close button
         centered
       >
-        <MessageModal />
+        <MessageModal hasOptions />
       </Modal>
       {hasMessage && (
         <button

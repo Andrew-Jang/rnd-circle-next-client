@@ -9,7 +9,7 @@ const CollabDetailHeader = ({ item }) => {
           <div className="flex space-x-2 items-center">
             {item.category.map((item, index) => (
               <div
-                className={`px-2 py-0.5 rounded-full text-white font-bold text-2xs ${
+                className={`px-2 py-0.5 rounded-full text-white font-medium text-2xs ${
                   index === 0 ? "bg-rndBlue" : "bg-black"
                 }`}
               >

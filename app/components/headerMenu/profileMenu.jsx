@@ -40,19 +40,19 @@ const ProfileMenu = () => {
 
     {
       key: "2",
-      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa">계정</div>,
+      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa py-1">계정</div>,
     },
     {
       key: "3",
-      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa">프로모션</div>,
+      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa py-1">프로모션</div>,
     },
     {
       key: "4",
-      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa">설정</div>,
+      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa py-1">설정</div>,
     },
     {
       key: "5",
-      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa">도움말</div>,
+      label: <div className="font-medium text-xs text-gray757575 px-4 hover:text-black font-spoqa py-1">도움말</div>,
     },
     {
       key: "6",

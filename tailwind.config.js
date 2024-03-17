@@ -23,6 +23,9 @@ module.exports = {
       fontSize: {
         "2xs": "10px",
       },
+      spacing: {
+        "2px": "2px",
+      },
     },
   },
   plugins: [],

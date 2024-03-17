@@ -11,8 +11,8 @@ const CollabDetailBody = ({ item }) => {
     >
       {Object.entries(item.body1).map(([key, value]) => (
         <div key={key} className="">
-          <p className="text-lg  text-left leading-7 font-medium">{key}</p>
-          <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 text-xs max-w-3xl">
+          <p className="text-lg text-left font-medium">{key}</p>
+          <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 text-xs max-w-3xl leading-5">
             {value}
           </div>
         </div>
@@ -31,8 +31,8 @@ const CollabDetailBody = ({ item }) => {
 
       {Object.entries(item.body2).map(([key, value]) => (
         <div key={key} className="mt-6">
-          <p className="text-lg  text-left leading-7 font-medium">{key}</p>
-          <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 text-xs max-w-3xl">
+          <p className="text-lg text-left font-medium">{key}</p>
+          <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 text-xs max-w-3xl leading-5">
             {value}
           </div>
         </div>

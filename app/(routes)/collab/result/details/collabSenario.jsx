@@ -8,28 +8,28 @@ import NextButton from "@/app/components/nextButton";
 const CollabSenario = () => {
   const Card = ({ item }) => (
     <div style={{ borderRadius: "26.39px" }} className="w-full p-8 rounded flex custom-border space-x-8">
-      <div className="w-80 flex-shrink-0">
+      <div style={{ width: "22rem" }} className="flex-shrink-0">
         <Image src={item.img} className="" alt="Vercel Logo" width={484} height={233} />
-        <div className="mt-4">
+        <div className="mt-5">
           <p className="text-lg font-medium">{item.title}</p>
-          <p className="text-gray757575 text-xs mt-2">{item.subtitle}</p>
+          <p className="text-gray757575 text-xs mt-1 leading-5">{item.subtitle}</p>
         </div>
       </div>
       <div className="w-full flex flex-col items-start">
         <div className={`px-3 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue`}>{item.tag}</div>
-        <p className="mt-4 text-sm break-keep">{item.text}</p>
+        <p className="mt-4 text-xs break-keep leading-5 text-black">{item.text}</p>
 
         <div className="flex space-x-2 mt-8">
-          <button className="px-3 py-1 border-2 rounded-full font-bold bg-black hover:bg-opacity-90 text-white transition flex items-center space-x-1">
-            <Image src="/chart.png" className="object-contain" alt="Vercel Logo" width={14} height={14} />
+          <button className="px-3 py-1 rounded-full font-medium bg-black hover:bg-opacity-90 text-white transition flex items-center space-x-1">
+            <Image src="/chart.png" className="object-contain" alt="Vercel Logo" width={14} height={14} unoptimized />
             <p className="text-xs">보유 기술</p>
           </button>
-          <button className="px-3 py-1 border-2 rounded-full font-bold hover:bg-gray-100 transition flex items-center space-x-1">
-            <Image src="/data.png" className="object-contain" alt="Vercel Logo" width={14} height={14} />
+          <button className="px-3 py-1 border-2 rounded-full font-medium hover:bg-gray-100 transition flex items-center space-x-1">
+            <Image src="/data.png" className="object-contain" alt="Vercel Logo" width={14} height={14} unoptimized />
             <p className=" text-xs">관련 프로젝트 경험 및 논문</p>
           </button>
         </div>
-        <div className="text-sm mt-4">
+        <div className="text-xs mt-4 leading-5">
           {item.bullet.map((item) => (
             <p>• {item}</p>
           ))}
@@ -49,9 +49,9 @@ const CollabSenario = () => {
       className="w-full flex justify-center bg-gradient-to-br relative mt-8"
     >
       <div className="max-w-screen-xl w-full h-full">
-        <p className="text-3xl text-left leading-7 font-medium">
-          관련 <br />
-          프로젝트
+        <p className="text-3xl text-left leading-7">
+          지원 가능한 <br />
+          정부 과제
         </p>
 
         <div className="w-full flex space-x-4 mt-8 items-center">
@@ -67,21 +67,25 @@ const CollabSenario = () => {
   return (
     <div className="mt-24 w-full">
       <div style={{ maxWidth: "1920px" }} className="w-full py-6 px-16 flex flex-col">
-        <div className="flex flex-col items-center text-2xl font-medium font-montserrat">
+        <div className="flex flex-col items-center text-2xl font-spoqa">
           <div className="flex">
             <p className="font-bold">디써클</p>
             <p>과</p>
           </div>
-          <p>Mechanic AI LAB/MAL의</p>
+          <div className="flex">
+            <p className="font-montserrat font-medium">Mechanic AI LAB/MAL</p>
+            <p>의</p>
+          </div>
+
           <p>가상 협력 시나리오</p>
         </div>
-        <p className="mt-4 font-medium text-xs text-center text-gray757575">
+        <p className="mt-4 text-xs text-center text-gray757575 leading-5">
           *해당 서비스는 가상의 상황을 기반으로 한 협력 시나리오를 제공합니다.
           <br />
           이는 실제 협력을 의미하거나 대체할 수 없으며, 현실적인 동의나 계약 없이 작성된 가상의 내용입니다.
         </p>
 
-        <div className="w-full mt-8 flex flex-col space-y-6">
+        <div className="w-full mt-8 flex flex-col space-y-6 mb-24">
           {SENARIO_SAMPLE.map((item) => (
             <Card item={item} />
           ))}

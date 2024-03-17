@@ -31,17 +31,17 @@ const Footer = () => {
               <h3 className="font-bold mb-12">주요 기능</h3>
               <div className="flex flex-col items-start font-medium space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight">파트너 모집 및</button>
-                  <button className="tracking-tight">프로젝트 등록</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">파트너 모집 및</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">프로젝트 등록</button>
                 </div>
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight">정부 프로젝트 등록</button>
-                  <button className="tracking-tight">기업 프로젝트 등록</button>
-                  <button className="tracking-tight">연구소 프로젝트 등록</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">정부 프로젝트 공고</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">기업 프로젝트 공고</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">연구소 프로젝트 공고</button>
                 </div>
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight">연구실 찾기</button>
-                  <button className="tracking-tight">맞춤형 파트너 제안</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">연구실 찾기</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">맞춤형 파트너 제안</button>
                 </div>
               </div>
             </div>
@@ -51,9 +51,9 @@ const Footer = () => {
               <h3 className="font-bold mb-12">서비스 안내</h3>
               <div className="flex flex-col items-start font-medium space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight">연구소 고객 서비스</button>
-                  <button className="tracking-tight">기업 고객 서비스</button>
-                  <button className="tracking-tight">요금 및 멤버십</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">연구소 고객 서비스</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">기업 고객 서비스</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">요금 및 멤버십</button>
                 </div>
               </div>
             </div>
@@ -63,9 +63,9 @@ const Footer = () => {
               <h3 className="font-bold mb-12">회사</h3>
               <div className="flex flex-col items-start font-medium space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight">회사 소개</button>
-                  <button className="tracking-tight">인재채용</button>
-                  <button className="tracking-tight">재정안내</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">회사 소개</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">공지사항</button>
+                  <button className="tracking-tight hover:text-gray757575 transition">채용안내</button>
                 </div>
               </div>
             </div>

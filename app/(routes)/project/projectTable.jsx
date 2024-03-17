@@ -286,24 +286,33 @@ const ProjectTable = () => {
   const [currentTab, setCurrentTab] = useState("정부");
   const TabsButton = ({ title, icon }) => (
     <button
+      style={{ borderBottomWidth: currentTab === title ? "0" : "2px" }}
       className={`${
         currentTab === title ? "border-b-0" : ""
-      } rounded-t-3xl custom-border w-full h-full bg-white hover:bg-gray-50 transition flex justify-center items-center space-x-2`}
+      } rounded-t-3xl custom-border w-full h-full bg-white group flex justify-center items-center space-x-2`}
       onClick={() => setCurrentTab(title)}
     >
       <Image
         src={currentTab === title ? `${icon}-on.png` : `${icon}.png`}
         alt="RnDCircle menu1"
-        className=""
+        className={currentTab !== title && "group-hover:brightness-50 transition"}
         width={18}
         height={18}
         priority
+        unoptimized
       />
-      <p className={`text-sm font-medium ${currentTab === title ? "text-rndBlue" : "text-gray757575"}`}>{title}</p>
+      <p
+        style={{ color: currentTab === title ? "" : "#a0a0a0" }}
+        className={`text-sm font-medium ${
+          currentTab === title ? "text-rndBlue" : "group-hover:brightness-50 transition"
+        }`}
+      >
+        {title}
+      </p>
     </button>
   );
   const Tabs = () => (
-    <div className="h-14 w-full flex">
+    <div className="h-14 w-full flex -space-x-2px">
       <TabsButton icon="/project1" title="정부" />
       <TabsButton icon="/project2" title="기업" />
       <TabsButton icon="/project3" title="연구실" />
@@ -312,7 +321,7 @@ const ProjectTable = () => {
   );
 
   const TableBody = () => (
-    <div className=" custom-border border-t-0 w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2">
+    <div style={{ borderTopWidth: 0 }} className="custom-border w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2">
       {currentTab === "정부"
         ? [...TEMP, ...TEMP].map((item) => <ProjectCard item={item} />)
         : currentTab === "기업"

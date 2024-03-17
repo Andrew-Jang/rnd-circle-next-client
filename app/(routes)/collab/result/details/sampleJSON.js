@@ -24,7 +24,7 @@ export const TEMP = [
 • 한국대학교 산학협력단 부단장 겸임`,
     },
 
-    category: ["D-13"],
+    category: ["인공지능"],
   },
 ];
 
