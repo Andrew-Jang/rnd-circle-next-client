@@ -5,6 +5,7 @@ import Header from "@/app/components/header";
 import ActionButton from "@/app/components/actionButton";
 import BackButton from "@/app/components/backButton";
 import { TEMP } from "./sampleJSON";
+import HashtagCell from "@/app/components/hashtagCell";
 
 export default function Lab() {
   const DetailCard = ({ item }) => (
@@ -30,7 +31,7 @@ export default function Lab() {
           >
             <div className="flex w-full justify-between">
               <div className="space-y-4 flex flex-col items-start">
-                <div className="px-2 py-0.5 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
+                <HashtagCell item={item.category} index={0} />
                 <p className="text-3xl text-left leading-7 font-medium">{item.title}</p>
                 <p className="text-sm text-left  text-gray757575">{item.subtitle}</p>
               </div>

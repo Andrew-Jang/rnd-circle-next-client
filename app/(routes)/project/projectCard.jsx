@@ -1,3 +1,4 @@
+import HashtagCell from "@/app/components/hashtagCell";
 import Link from "next/link";
 import React from "react";
 
@@ -15,8 +16,10 @@ const ProjectCard = ({ item }) => {
     >
       <button className="rounded-3xl custom-border w-full flex flex-col items-start p-7 hover:bg-gray-100 transition">
         <div className="flex flex-wrap gap-2">
-          {item.countdown.map((item) => (
-            <div className="px-3 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item}</div>
+          {item.countdown.map((item, index) => (
+            <HashtagCell item={item} index={index} />
+
+            // <div className="px-3 py-0.5 rounded-full text-white font-bold text-2xs bg-rndBlue">{item}</div>
           ))}
         </div>
         <p className="text-left leading-7 font-bold mt-3 ">{item.title}</p>

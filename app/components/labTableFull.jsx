@@ -5,6 +5,7 @@ import PaginationComponent from "./pagination";
 import Link from "next/link";
 import { Dropdown, Menu, Checkbox, Modal } from "antd";
 import MessageModal from "./modals/messageModal";
+import HashtagCell from "./hashtagCell";
 
 const LabTableFull = () => {
   const researchLabs = [
@@ -139,7 +140,8 @@ const LabTableFull = () => {
         <Link className="h-12 w-full" href={"/lab/detail"}>
           <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
             <div style={{ width: "4.5rem" }} className="flex justify-center">
-              <div className="px-2 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
+              <HashtagCell item={item.category} index={0} />
+              {/* <div className="px-2 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div> */}
             </div>
             <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
               <button

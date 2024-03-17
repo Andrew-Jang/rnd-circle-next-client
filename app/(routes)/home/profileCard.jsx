@@ -1,3 +1,4 @@
+import HashtagCell from "@/app/components/hashtagCell";
 import Image from "next/image";
 import React from "react";
 
@@ -11,8 +12,8 @@ const ProfileCard = ({ title, name, desc, address }) => {
       }}
       className="w-72 h-72 custom-border border-white flex flex-col items-center py-8 transition backdrop-blur"
     >
-      <div className="w-16 h-16 rounded-full bg-white border"></div>
-      <div className="px-2 py-0.5 text-white rounded-full mt-5 bg-rndBlue font-bold text-2xs">{title}</div>
+      <div className="w-16 h-16 rounded-full bg-white border mb-5"></div>
+      <HashtagCell item={title} index={0} />
       <div className="mt-1" style={{ fontWeight: "500" }}>
         {name}
       </div>
