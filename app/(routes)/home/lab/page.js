@@ -42,12 +42,14 @@ export default function Lab() {
         <div className="w-full h-full absolute flex">
           <div className="flex w-1/2 flex-col items-start flex-shrink-0">
             <h1
-              style={{ lineHeight: 1.1, fontSize: "5rem" }}
-              className="font-montserrat text-left text-7xl leading-tight font-medium"
+              style={{ lineHeight: 1.1 }}
+              className="font-montserrat text-left xl:text-6.5xl 2xl:text-7.5xl leading-tight font-medium"
             >
               Mechanic <br /> AI LAB / MAL
             </h1>
-            <h2 className="mt-2 text-xl font-medium  text-gray757575">한국대학교 인공지능대학 인공지능학과</h2>
+            <h2 className="mt-2 text-lg 2xl:text-xl font-medium  text-gray757575">
+              한국대학교 인공지능대학 인공지능학과
+            </h2>
 
             <div className="grid grid-cols-2 gap-5 p-8 mt-4">
               <MiniCard icon={"/card1.png"} text={"Message"} number={"0"} />
@@ -72,34 +74,23 @@ export default function Lab() {
   const Bar = ({ title, height, color }) => (
     <div className="flex flex-col items-center">
       <div className="relative">
-        <Image src="/bar.png" alt="Vercel Logo" className="" width={50} height={150} />
+        <div className="h-[134px] w-[43px] 2xl:h-[124px] 2xl:w-[50px] relative">
+          <Image
+            src="/bar.png"
+            alt="Vercel Logo"
+            layout="fill" // required
+            objectFit="contain" // change to suit your needs
+          />
+        </div>
         <div
-          style={{ borderRadius: "15px", backgroundColor: color, width: 50, height }}
-          className="absolute bottom-0 w-full hover:opacity-70 cursor-pointer transition"
+          style={{ backgroundColor: color, height }}
+          className="rounded-[13px] 2xl:rounded-[15px] absolute bottom-0 w-[43px] 2xl:w-[50px] hover:opacity-70 cursor-pointer transition"
         ></div>
       </div>
-      <p style={{ fontSize: "10px", color: "#525252" }} className="font-montserrat mt-1">
+      <p style={{ fontSize: "10px", color: "#525252" }} className="font-montserrat mt-0.5 2xl:mt-1">
         {title}
       </p>
     </div>
-  );
-
-  const CardButton = ({ icon, title, subtitle }) => (
-    <Link
-      href={"/project/detail/government"}
-      style={{
-        borderRadius: "26.39px",
-      }}
-      className="w-full h-24 rounded-xl custom-border bg-white hover:bg-gray-100 transition flex items-center px-4 flex-shrink-0 space-x-4 backdrop-blur"
-    >
-      <div className="w-11 h-11 rounded-full flex-shrink-0 flex items-center justify-center bg-rndBlue">
-        <Image src={icon} alt="Vercel Logo" className="" width={18} height={18} />
-      </div>
-      <div className="w-full text-left">
-        <p className="font-montserrat font-medium text-lg ">{title}</p>
-        <p className="mt-0.5  text-gray757575 text-2xs">{subtitle}</p>
-      </div>
-    </Link>
   );
 
   const NormalCard = () => (
@@ -108,9 +99,9 @@ export default function Lab() {
         backgroundColor: "rgba(255, 255, 255, 0.5)",
         borderRadius: "26.39px",
       }}
-      className="w-48 h-full custom-border flex flex-col justify-between p-8 py-8 flex-shrink-0 backdrop-blur hover:opacity-60 transition cursor-pointer"
+      className="w-44 p-[1.5rem] py-[1.5rem] 2xl:w-48 2xl:p-8 2xl:py-8 h-full custom-border flex flex-col justify-between flex-shrink-0 backdrop-blur hover:opacity-60 transition cursor-pointer"
     >
-      <p style={{ fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7 font-medium">
+      <p className="font-montserrat text-[24px] 2xl:text-[27px] text-left leading-7 font-medium">
         Edit <br /> Website
       </p>
       <p className="text-xs text-left  text-gray757575">
@@ -118,99 +109,96 @@ export default function Lab() {
       </p>
     </button>
   );
+
   const WavvyCard = ({ title1, title2, subtitle }) => (
     <div className="relative hover:opacity-60 transition cursor-pointer">
       <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} unoptimized />
-      <div className="w-full h-full absolute top-0 p-8 py-8">
-        <p style={{ fontWeight: "500", fontSize: "27px" }} className="font-montserrat text-2xl text-left leading-7">
+      <div className="w-full h-full absolute top-0 p-[1.5rem] py-[1.5rem] 2xl:p-8 2xl:py-8">
+        <p style={{ fontWeight: "500" }} className="font-montserrat text-[24px] 2xl:text-[27px] text-left leading-7">
           {title1} <br /> {title2}
         </p>
-        <p className="text-xs text-left mt-3  text-gray757575">{subtitle}</p>
+        <p className="text-xs text-left mt-2.5 2xl:mt-3 text-gray757575">{subtitle}</p>
       </div>
       <button className="absolute top-0 right-0 ">
         <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
       </button>
     </div>
   );
+
+  const VisitorMetrics1 = () => (
+    <div
+      style={{
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        borderRadius: "26.39px",
+      }}
+      className="w-full h-[16rem] 2xl:h-[17.2rem] rounded-xl custom-border flex flex-col justify-between px-2 2xl:px-3 pt-[1.5rem] 2xl:pt-8 pb-3 transition flex-shrink-0 backdrop-blur"
+    >
+      <div className="flex items-center justify-between w-full px-5 2xl:px-5 mb-8">
+        <p className="font-montserrat font-medium text-[24px] 2xl:text-[27px] text-left">Visitor metrics</p>
+        <div className="flex items-center space-x-2">
+          <button className="rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium hover:brightness-150 transition bg-rndBlue">
+            웹 조회수
+          </button>
+          <button
+            style={{ backgroundColor: "#FBFBFB", borderColor: "#ECECEC" }}
+            className="bg-black rounded-full py-1.5 px-4 font-montserrat text-xs font-medium border hover:brightness-110 transition text-gray757575"
+          >
+            매칭 제안수
+          </button>
+        </div>
+      </div>
+      <div
+        style={{ borderRadius: "24px" }}
+        className="w-full h-64 custom-border relative flex items-center px-4 2xl:px-5 justify-between 2xl:pt-2"
+      >
+        <Bar title={"MON"} height={"4rem"} color={"#9397FF"} />
+        <Bar title={"TUE"} height={"2rem"} color={"#C7CAFF"} />
+        <Bar title={"WED"} height={"3rem"} color={"#6F75FF"} />
+        <Bar title={"THU"} height={"4rem"} color={"#323AFF"} />
+        <Bar title={"FRI"} height={"3rem"} color={"#6F75FF"} />
+        <Bar title={"SAT"} height={"5rem"} color={"#000AFF"} />
+        <Bar title={"SUN"} height={"7.7rem"} color={"#000000"} />
+      </div>
+    </div>
+  );
+
+  const VisitorMetrics2 = () => (
+    <div
+      style={{
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        borderRadius: "26.39px",
+      }}
+      className="w-full h-[12.25rem] 2xl:h-[13rem] rounded-xl custom-border border-white flex flex-col justify-between px-2 py-[1.5rem] 2xl:py-8 2xl:px-3 transition flex-shrink-0 backdrop-blur"
+    >
+      <div className="space-y-[1.7rem] 2xl:space-y-8 flex flex-col items-start">
+        <p className="font-montserrat font-medium text-[24px] 2xl:text-[27px] text-left leading-7 px-5">
+          Visitor metrics
+        </p>
+        <div style={{ borderRadius: "24px", height: "6.5rem" }} className="w-full h-24 custom-border relative">
+          <Image src="/metrics.png" alt="Vercel Logo" className="" width={537} height={120} />
+          <Image src="/metrics-graph.png" alt="Vercel Logo" className="absolute bottom-0" width={637} height={110} />
+        </div>
+      </div>
+    </div>
+  );
+
   const CardSection = () => (
-    <div style={{ marginTop: "-245px" }} className="w-full h-full bg-opacity-50 px-16 z-20 flex">
+    <div className="-mt-[220px] 2xl:-mt-[245px] max-w-screen-xl w-full h-full z-20 flex">
       <div className="w-full h-full">
-        <div style={{ height: "246px" }} className="w-full bg-opacity-50 flex justify-end pt-8 pr-8">
+        <div className="w-full h-[220px] 2xl:h-[246px] bg-opacity-50 flex justify-end pt-[1.5rem] pr-[1.5rem] 2xl:pt-8 2xl:pr-8">
           <NormalCard />
         </div>
-        <div style={{ height: "548px" }} className="w-full h-96 bg-opacity-50 pt-8 pr-8 flex space-x-8">
+        <div className="w-full h-[502px] 2xl:h-[548px] bg-opacity-50 flex pt-[1.5rem] pr-[1.5rem] space-x-6 2xl:pt-8 2xl:pr-8 2xl:space-x-8">
           <ArticleCard />
-          <div className="space-y-8 w-full">
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.5)",
-                borderRadius: "26.39px",
-                height: "17.2rem",
-              }}
-              className="w-full rounded-xl custom-border flex flex-col justify-between px-3 pt-8 pb-3 transition flex-shrink-0 backdrop-blur"
-            >
-              <div className="flex items-center justify-between w-full px-5 mb-8">
-                <p style={{ fontWeight: "500", fontSize: "27px" }} className="font-montserrat text-2xl text-left">
-                  Visitor metrics
-                </p>
-                <div className="flex items-center space-x-2">
-                  <button className="rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium hover:brightness-150 transition bg-rndBlue">
-                    웹 조회수
-                  </button>
-                  <button
-                    style={{ backgroundColor: "#FBFBFB", borderColor: "#ECECEC" }}
-                    className="bg-black rounded-full py-1.5 px-4 font-montserrat text-xs font-medium border hover:brightness-110 transition text-gray757575"
-                  >
-                    매칭 제안수
-                  </button>
-                </div>
-              </div>
-              <div
-                style={{ borderRadius: "25px" }}
-                className="w-full h-64 custom-border relative flex items-center px-5 justify-between pt-2"
-              >
-                <Bar title={"MON"} height={"4rem"} color={"#9397FF"} />
-                <Bar title={"TUE"} height={"2rem"} color={"#C7CAFF"} />
-                <Bar title={"WED"} height={"3rem"} color={"#6F75FF"} />
-                <Bar title={"THU"} height={"4rem"} color={"#323AFF"} />
-                <Bar title={"FRI"} height={"3rem"} color={"#6F75FF"} />
-                <Bar title={"SAT"} height={"5rem"} color={"#000AFF"} />
-                <Bar title={"SUN"} height={"7.7rem"} color={"#000000"} />
-              </div>
-            </div>
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.5)",
-                borderRadius: "26.39px",
-                height: "13rem",
-              }}
-              className="w-full h-52 rounded-xl custom-border border-white flex flex-col justify-between py-8 px-3 transition flex-shrink-0 backdrop-blur"
-            >
-              <div className="space-y-8 flex flex-col items-start">
-                <p
-                  style={{ fontWeight: "500", fontSize: "27px" }}
-                  className="font-montserrat text-2xl text-left leading-7 px-5"
-                >
-                  Visitor metrics
-                </p>
-                <div style={{ borderRadius: "25px", height: "6.5rem" }} className="w-full h-24 custom-border relative">
-                  <Image src="/metrics.png" alt="Vercel Logo" className="" width={537} height={120} />
-                  <Image
-                    src="/metrics-graph.png"
-                    alt="Vercel Logo"
-                    className="absolute bottom-0"
-                    width={637}
-                    height={110}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="space-y-6 2xl:space-y-8 w-full">
+            <VisitorMetrics1 />
+            <VisitorMetrics2 />
           </div>
         </div>
       </div>
 
-      <div className="w-auto h-full py-8 flex space-x-8 flex-shrink-0">
-        <div className="flex-shrink-0 space-y-6">
+      <div className="w-auto max-w-1.5sm 2xl:max-w-xl h-full flex py-[1.5rem] space-x-[1.5rem] 2xl:py-8 2xl:space-x-8 flex-shrink-0">
+        <div className="space-y-5">
           <WavvyCard title1={"Visit"} title2={"Website"} subtitle={"나의 연구실 웹사이트로 이동해보세요"} />
           <WavvyCard title1={"Project"} title2={"Management"} subtitle={"연구실의 프로젝트를 관리하세요"} />
           <HomeProjectCard />

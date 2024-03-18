@@ -139,11 +139,10 @@ const LabTableFull = () => {
       <>
         <Link className="h-12 w-full" href={"/lab/detail"}>
           <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
-            <div style={{ width: "4.5rem" }} className="flex justify-center">
+            <div className="w-[3.5rem] 2xl:w-[4.5rem] flex justify-center">
               <HashtagCell item={item.category} index={0} />
-              {/* <div className="px-2 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div> */}
             </div>
-            <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
+            <div className="w-[20rem] 2xl:w-80 flex items-center space-x-1 justify-center flex-shrink-0">
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -159,18 +158,18 @@ const LabTableFull = () => {
                   unoptimized
                 />
               </button>
-              <p className="font-bold">{item.labs[0].name}</p>
+              <p className="font-bold text-sm 2xl:text-base">{item.labs[0].name}</p>
             </div>
-            <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].affiliation}</p>
+            <div className="w-[11rem] 2xl:w-60 flex items-center justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].affiliation}</p>
             </div>
-            <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].leader}</p>
+            <div className="w-[7rem] 2xl:w-32 flex items-center  justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].leader}</p>
             </div>
-            <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].focus}</p>
+            <div className="w-[16rem] 2xl:w-72 flex items-center justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].focus}</p>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4 2xl:space-x-6">
               {!item.disableWeb ? (
                 <button
                   style={{
@@ -214,24 +213,24 @@ const LabTableFull = () => {
 
   const TableMenu = ({ item }) => (
     <div className="h-12 flex items-center px-4 rounded-lg cursor-pointer">
-      <div style={{ width: "4.5rem" }} className="flex justify-center">
-        <div className="font-medium text-sm">카테고리</div>
+      <div className="w-[3.5rem] 2xl:w-[4.5rem] flex justify-center flex-shrink-0">
+        <div className="font-medium text-xs">카테고리</div>
       </div>
-      <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
-        <p className="font-medium text-sm">연구실명</p>
+      <div className="w-[20rem] 2xl:w-80 flex items-center space-x-1 justify-center flex-shrink-0">
+        <p className="font-medium text-xs">연구실명</p>
       </div>
-      <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-        <p className="font-medium text-sm">소속기관</p>
+      <div className="w-[11rem] 2xl:w-60 flex items-center justify-center flex-shrink-0 ">
+        <p className="font-medium text-xs">소속기관</p>
       </div>
-      <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-        <p className="font-medium text-sm">지도교수</p>
+      <div className="w-[7rem] 2xl:w-32 flex items-center  justify-center flex-shrink-0 ">
+        <p className="font-medium text-xs">지도교수</p>
       </div>
-      <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-        <p className="font-medium text-sm">연구 분야</p>
+      <div className="w-[16rem] 2xl:w-72 flex items-center justify-center flex-shrink-0 ">
+        <p className="font-medium text-xs">연구 분야</p>
       </div>
-      <div className="flex space-x-6">
-        <p className="font-medium text-sm w-12">웹</p>
-        <p className="font-medium text-sm w-12">연락</p>
+      <div className="flex space-x-4 2xl:space-x-6">
+        <p className="font-medium text-xs w-12">웹</p>
+        <p className="font-medium text-xs w-12">연락</p>
       </div>
     </div>
   );
@@ -683,7 +682,7 @@ const LabTableFull = () => {
         <TableMenu />
         <div className="mt-4 w-full">
           {[...researchLabs, ...researchLabs].map((item, index) => (
-            <Cell id={index} item={item} />
+            <Cell key={index} id={index} item={item} />
           ))}
         </div>
       </div>

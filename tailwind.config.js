@@ -22,9 +22,14 @@ module.exports = {
       },
       fontSize: {
         "2xs": "10px",
+        "7.5xl": "5rem",
+        "6.5xl": "4.4rem",
       },
       spacing: {
         "2px": "2px",
+      },
+      maxWidth: {
+        "1.5sm": "23rem",
       },
     },
   },

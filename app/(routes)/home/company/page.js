@@ -59,65 +59,33 @@ export default function Company() {
     </div>
   );
 
-  const CardButton = ({ icon, title, subtitle }) => (
-    <Link
-      href={"/project/detail/company"}
-      style={{
-        borderRadius: "26.39px",
-      }}
-      className="w-full h-24 custom-border border-white bg-white hover:bg-gray-100 transition flex items-center px-4 flex-shrink-0 space-x-4 backdrop-blur"
-    >
-      <div className="w-11 h-11 rounded-full flex-shrink-0 flex items-center justify-center bg-rndBlue">
-        <Image src={icon} alt="Vercel Logo" className="" width={18} height={18} />
+  const WavvyCard = ({ title1, title2, subtitle }) => (
+    <div className="relative hover:opacity-60 transition cursor-pointer">
+      <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} unoptimized />
+      <div className="w-full h-full absolute top-0 p-[1.5rem] py-[1.5rem] 2xl:p-8 2xl:py-8">
+        <p style={{ fontWeight: "500" }} className="font-montserrat text-[24px] 2xl:text-[27px] text-left leading-7">
+          {title1} <br /> {title2}
+        </p>
+        <p className="text-xs text-left mt-2.5 2xl:mt-3 text-gray757575">{subtitle}</p>
       </div>
-      <div className="w-full text-left">
-        <p className="font-montserrat font-medium text-lg ">{title}</p>
-        <p className="mt-0.5  text-gray757575 text-2xs">{subtitle}</p>
-      </div>
-    </Link>
+      <button className="absolute top-0 right-0 ">
+        <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
+      </button>
+    </div>
   );
+
   const CardSection = () => (
-    <div style={{ marginTop: "-245px" }} className="w-full h-full bg-opacity-50 px-16 z-20 flex">
+    <div className="-mt-[230px] 2xl:-mt-[245px] max-w-screen-xl w-full h-full z-20 flex">
       <div className="w-full h-full">
-        <div style={{ height: "246px" }} className="w-full bg-opacity-50 flex justify-end pt-8 pr-8"></div>
-        <div className="w-full bg-opacity-50 pt-8 pr-8 flex space-x-8">
-          <div className="relative">
-            <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} />
-            <div className="w-full h-full absolute top-0 p-8 py-8">
-              <p
-                style={{ fontWeight: "500", fontSize: "27px" }}
-                className="font-montserrat text-2xl text-left leading-7"
-              >
-                Register <br /> Project
-              </p>
-              <p className="text-xs text-left mt-3  text-gray757575">새로운 프로젝트를 등록하세요</p>
-            </div>
-            <button className="absolute top-0 right-0 hover:opacity-50">
-              <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
-            </button>
-          </div>
-          <div className="relative">
-            <Image src="/union.png" alt="Vercel Logo" className="" width={400} height={151} />
-            <div className="w-full h-full absolute top-0 p-8 py-8">
-              <p
-                style={{ fontWeight: "500", fontSize: "27px" }}
-                className="font-montserrat text-2xl text-left leading-7"
-              >
-                Project <br /> Management
-              </p>
-              <p className="text-xs text-left mt-3  text-gray757575">저장한 프로젝트를 관리하세요</p>
-            </div>
-            <button className="absolute top-0 right-0 hover:opacity-50">
-              <Image src="/union-action.png" alt="Vercel Logo" width={54} height={54} />
-            </button>
-          </div>
+        <div className="h-[234px] 2xl:h-[246px] w-full flex justify-end pt-[1.5rem] pr-[1.5rem] 2xl:pt-8 2x:pr-8"></div>
+        <div className="w-full pt-[1.5rem] pr-[1.5rem] 2xl:pt-8 2x:pr-8 flex space-x-[1.5rem] 2xl:space-x-8">
+          <WavvyCard title1={"Register"} title2={"Project"} subtitle={"새로운 프로젝트를 등록하세요"} />
+          <WavvyCard title1={"Project"} title2={"Management"} subtitle={"저장한 프로젝트를 관리하세요"} />
         </div>
       </div>
 
-      <div className="w-auto h-full py-8 flex space-x-8 flex-shrink-0">
-        <div className="flex-shrink-0 space-y-6">
-          <HomeProjectCard />
-        </div>
+      <div className="w-full h-full py-[1.5rem] 2xl:py-8 flex max-w-1.5sm 2xl:max-w-[24.7rem] ">
+        <HomeProjectCard />
       </div>
     </div>
   );

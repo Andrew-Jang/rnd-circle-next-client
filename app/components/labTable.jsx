@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import MessageModal from "./modals/messageModal";
+import HashtagCell from "./hashtagCell";
 
 const LabTable = () => {
   const researchLabs = [
@@ -135,10 +136,10 @@ const LabTable = () => {
       <>
         <Link className="h-12 w-full" href="/lab/detail">
           <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
-            <div style={{ width: "4.5rem" }} className="flex justify-center">
-              <div className="px-2 py-0.5 rounded-full text-white font-medium text-2xs bg-rndBlue">{item.category}</div>
+            <div className="w-[3.5rem] 2xl:w-[4.5rem] flex justify-center">
+              <HashtagCell item={item.category} index={0} />
             </div>
-            <div className="flex items-center space-x-1 w-80 justify-center flex-shrink-0">
+            <div className="w-[20rem] 2xl:w-80 flex items-center space-x-1 justify-center flex-shrink-0">
               <button
                 onClick={(e) => {
                   e.preventDefault();
@@ -154,23 +155,23 @@ const LabTable = () => {
                   unoptimized
                 />
               </button>
-              <p className="font-bold">{item.labs[0].name}</p>
+              <p className="font-bold text-sm 2xl:text-base">{item.labs[0].name}</p>
             </div>
-            <div className="flex items-center w-60 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].affiliation}</p>
+            <div className="w-[11rem] 2xl:w-60 flex items-center justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].affiliation}</p>
             </div>
-            <div className="flex items-center w-32 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].leader}</p>
+            <div className="w-[7rem] 2xl:w-32 flex items-center  justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].leader}</p>
             </div>
-            <div className="flex items-center w-72 justify-center flex-shrink-0 ">
-              <p className="font-medium text-xs">{item.labs[0].focus}</p>
+            <div className="w-[16rem] 2xl:w-72 flex items-center justify-center flex-shrink-0 ">
+              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].focus}</p>
             </div>
-            <div className="flex space-x-6">
+            <div className="flex space-x-4 2xl:space-x-6">
               <button
                 style={{
                   borderRadius: "26.39px",
                 }}
-                className="custom-border rounded-xl h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
+                className="custom-border rounded-xl h-10 flex items-center justify-center w-12 bg-white hover:bg-gray-200 transition backdrop-blur"
               >
                 <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
               </button>
@@ -178,7 +179,7 @@ const LabTable = () => {
                 style={{
                   borderRadius: "26.39px",
                 }}
-                className="custom-border h-10 px-3.5 bg-white hover:bg-gray-200 transition backdrop-blur"
+                className="custom-border h-10 flex items-center justify-center w-12 bg-white hover:bg-gray-200 transition backdrop-blur"
                 onClick={(e) => {
                   e.preventDefault();
                   showModal();
@@ -216,7 +217,7 @@ const LabTable = () => {
         style={{
           borderRadius: "26.39px",
         }}
-        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative custom-border py-8 px-2 backdrop-blur"
+        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative custom-border py-[1.5rem] 2xl:py-8 px-2 backdrop-blur"
       >
         <p
           style={{ fontWeight: "500", fontSize: "27px" }}
@@ -224,7 +225,7 @@ const LabTable = () => {
         >
           LAB
         </p>
-        <div className="w-full flex space-x-8 h-12 px-6">
+        <div className="w-full flex space-x-6 2xl:space-x-8 h-12 px-6">
           <div className="relative flex w-full items-center">
             <input
               style={{ backgroundColor: "#EBEBEB", fontWeight: "500" }}
@@ -245,7 +246,7 @@ const LabTable = () => {
 
         <div style={{ maxHeight: "36rem" }} className="mt-8 w-full overflow-y-auto px-6">
           {[...researchLabs, ...researchLabs].map((item, index) => (
-            <Cell id={index} item={item} />
+            <Cell key={index} id={index} item={item} />
           ))}
         </div>
       </div>
