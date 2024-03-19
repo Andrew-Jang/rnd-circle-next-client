@@ -13,7 +13,7 @@ const NotificationMenu = () => {
       <div className="space-y-1">
         <div className="items-center inline-block text-xs font-medium tracking-tight break-keep">
           <p className="inline">{title}</p>
-          <p className="inline text-gray757575"> 이 협업을 요청하였습니다.</p>
+          <p className="inline text-gray757575 font-normal"> 이 협업을 요청하였습니다.</p>
         </div>
         <p style={{ color: "#B7B7B7" }} className="text-2xs">
           {time}

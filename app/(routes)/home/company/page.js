@@ -1,32 +1,13 @@
 import Image from "next/image";
 import Footer from "@/app/components/footer";
 import Menu from "@/app/components/menu";
-import LabTable from "@/app/components/labTable";
+import LabTable from "@/app/(routes)/home/lab/labTable";
 import Header from "@/app/components/header";
-import Link from "next/link";
 import ProfileCard from "../profileCard";
 import HomeProjectCard from "../homeProjectCard";
+import MiniCard from "../MiniCard";
 
 export default function Company() {
-  const MiniCard = ({ icon, text, number, hasNew }) => (
-    <button
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
-
-        borderRadius: "26.39px",
-        height: "90px",
-      }}
-      className="w-28 h-24 custom-border border-white flex flex-col items-center py-4 hover:brightness-110 transition backdrop-blur"
-    >
-      <div className="relative">
-        <Image src={icon} alt="card1" className="" width={20} height={20} priority />
-        {hasNew && <div className="absolute -top-0.5 -right-1.5 w-1 h-1 rounded-full bg-rndBlue"></div>}
-      </div>
-      <p className="font-montserrat text-xs text-gray757575">{text}</p>
-      <p className="font-montserrat text-xs mt-1.5 font-semibold">{number}</p>
-    </button>
-  );
-
   const WelcomeSection = () => (
     <div
       style={{

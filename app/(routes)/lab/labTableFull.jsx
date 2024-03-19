@@ -1,216 +1,12 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import PaginationComponent from "./pagination";
-import Link from "next/link";
-import { Dropdown, Menu, Checkbox, Modal } from "antd";
-import MessageModal from "./modals/messageModal";
-import HashtagCell from "./hashtagCell";
+import PaginationComponent from "../../components/pagination";
+import { Dropdown } from "antd";
+import TableCell from "../../components/TableCell";
+import { LAB_PAGE } from "./sampleJSON";
 
 const LabTableFull = () => {
-  const researchLabs = [
-    {
-      category: "인공지능",
-      labs: [
-        {
-          name: "Mechanic AI LAB",
-          affiliation: "한국대학교 인공지능학과",
-          leader: "이규목",
-          focus: "Multimodal / 워크 이미징 / Robotics",
-        },
-      ],
-    },
-    {
-      category: "순수수학",
-      disableWeb: true,
-      labs: [
-        {
-          name: "Pure Mathematics Lab",
-          affiliation: "한국대학교 수학과",
-          leader: "김수리",
-          focus: "수학적 논리 / 그룹 이론 / 토폴로지",
-        },
-      ],
-    },
-    {
-      category: "응용수학",
-      labs: [
-        {
-          name: "Applied Mathematics Group",
-          affiliation: "연세대학교 수학과",
-          leader: "이용욱",
-          focus: "수치해석 / 프로그래밍 언어 / 최적화",
-        },
-      ],
-    },
-    {
-      category: "통계학",
-      labs: [
-        {
-          name: "Statistics Lab",
-          affiliation: "고려대학교 통계학과",
-          leader: "박통계",
-          focus: "생물통계학 / 시계열 분석 / 베이지안 통계",
-        },
-      ],
-    },
-    {
-      category: "계산수학",
-      labs: [
-        {
-          name: "Computational Math Group",
-          affiliation: "POSTECH 수학과",
-          leader: "임계산",
-          focus: "수치해석 / 계산기하학 / 병렬 컴퓨팅",
-        },
-      ],
-    },
-    {
-      category: "확률론",
-      labs: [
-        {
-          name: "Probability Theory Lab",
-          affiliation: "서강대학교 확률론 및 통계학과",
-          leader: "정확률",
-          focus: "확률과정 / 마르코프 연쇄 / 랜덤 그래프 이론",
-        },
-      ],
-    },
-    {
-      category: "기하학",
-      labs: [
-        {
-          name: "Geometry Research Center",
-          affiliation: "성균관대학교 수학과",
-          leader: "이기하",
-          focus: "위상기하학 / 대수기하학 / 비유클리드 기하학",
-        },
-      ],
-    },
-    {
-      category: "대수학",
-      labs: [
-        {
-          name: "Algebraic Structures Lab",
-          affiliation: "한양대학교 수학과",
-          leader: "박대수",
-          focus: "군 이론 / 환 이론 / 대수적 군물",
-        },
-      ],
-    },
-    {
-      category: "수리물리학",
-      labs: [
-        {
-          name: "Mathematical Physics Lab",
-          affiliation: "경희대학교 물리학과",
-          leader: "김수리물",
-          focus: "양자역학 / 수리물리학 / 통계물리학",
-        },
-      ],
-    },
-    {
-      category: "자연과학",
-      labs: [
-        {
-          name: "Natural Sciences Research Lab",
-          affiliation: "중앙대학교 자연과학대학",
-          leader: "이자연",
-          focus: "자연과학 전반 / 통합과학 연구",
-        },
-      ],
-    },
-  ];
-
-  const Cell = ({ item }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [bookmarkChecked, setBookmarkChecked] = useState(false);
-
-    const showModal = () => {
-      setIsModalOpen(true);
-    };
-    const handleOk = () => {
-      setIsModalOpen(false);
-    };
-    const handleCancel = () => {
-      setIsModalOpen(false);
-    };
-    return (
-      <>
-        <Link className="h-12 w-full" href={"/lab/detail"}>
-          <div className="h-12 flex items-center px-4 hover:bg-gray-100 transition rounded-lg cursor-pointer">
-            <div className="w-[3.5rem] 2xl:w-[4.5rem] flex justify-center">
-              <HashtagCell item={item.category} index={0} />
-            </div>
-            <div className="w-[20rem] 2xl:w-80 flex items-center space-x-1 justify-center flex-shrink-0">
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  setBookmarkChecked(!bookmarkChecked);
-                }}
-              >
-                <Image
-                  src={bookmarkChecked ? "/bookmark-filled.png" : "/bookmark.png"}
-                  alt="Vercel Logo"
-                  className=""
-                  width={16}
-                  height={16}
-                  unoptimized
-                />
-              </button>
-              <p className="font-bold text-sm 2xl:text-base">{item.labs[0].name}</p>
-            </div>
-            <div className="w-[11rem] 2xl:w-60 flex items-center justify-center flex-shrink-0 ">
-              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].affiliation}</p>
-            </div>
-            <div className="w-[7rem] 2xl:w-32 flex items-center  justify-center flex-shrink-0 ">
-              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].leader}</p>
-            </div>
-            <div className="w-[16rem] 2xl:w-72 flex items-center justify-center flex-shrink-0 ">
-              <p className="font-medium text-[11px] 2xl:text-xs">{item.labs[0].focus}</p>
-            </div>
-            <div className="flex space-x-4 2xl:space-x-6">
-              {!item.disableWeb ? (
-                <button
-                  style={{
-                    borderRadius: "26.39px",
-                  }}
-                  className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
-                >
-                  <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
-                </button>
-              ) : (
-                <div className="w-12" />
-              )}
-              <button
-                style={{
-                  borderRadius: "26.39px",
-                }}
-                onClick={(e) => {
-                  showModal();
-                  e.preventDefault();
-                }}
-                className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
-              >
-                <Image src="/chat.png" alt="Vercel Logo" className="" width={18} height={18} />
-              </button>
-            </div>
-          </div>
-        </Link>
-        <Modal
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-          footer={null} // This will remove the footer buttons
-          closeIcon={<span />} // This will remove the close button
-          centered
-        >
-          <MessageModal />
-        </Modal>
-      </>
-    );
-  };
-
   const TableMenu = ({ item }) => (
     <div className="h-12 flex items-center px-4 rounded-lg cursor-pointer">
       <div className="w-[3.5rem] 2xl:w-[4.5rem] flex justify-center flex-shrink-0">
@@ -646,8 +442,8 @@ const LabTableFull = () => {
           <SearchFilterButton title="대학" type={2} />
           <SearchFilterButton title="지역" type={3} />
           <input
-            className="w-full h-full rounded-full px-2 text-xs placeholder-gray757575 outline-none font-medium bg-transparent"
-            placeholder="전국의 연구실을 키워드로 검색해보세요"
+            className="w-full h-full rounded-full px-2 text-xs placeholder-gray757575 outline-none font-normal bg-transparent"
+            placeholder="관심있는 연구실 및 연구분야를 검색해보세요."
           />
           <button
             style={{ borderRadius: "14px" }}
@@ -677,12 +473,12 @@ const LabTableFull = () => {
         style={{
           borderRadius: "26.39px",
         }}
-        className="bg-custom-pattern max-w-screen-xl w-full h-full z-20 text-center relative custom-border p-8 pt-4 backdrop-blur"
+        className="max-w-screen-xl w-full h-full z-20 text-center relative custom-border p-8 pt-4 backdrop-blur overflow-auto"
       >
         <TableMenu />
         <div className="mt-4 w-full">
-          {[...researchLabs, ...researchLabs].map((item, index) => (
-            <Cell key={index} id={index} item={item} />
+          {[...LAB_PAGE, ...LAB_PAGE].map((item, index) => (
+            <TableCell key={index} id={index} item={item} />
           ))}
         </div>
       </div>

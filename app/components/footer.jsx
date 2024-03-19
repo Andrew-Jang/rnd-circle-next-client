@@ -28,11 +28,13 @@ const Footer = () => {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10 text-xs ">
             <div className="flex flex-col items-start">
               {/* Column 1 */}
-              <h3 className="font-bold mb-12">주요 기능</h3>
-              <div className="flex flex-col items-start font-medium space-y-6 w-full">
+              <h3 className="font-medium mb-12">주요 기능</h3>
+              <div className="flex flex-col items-start font-normal space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
-                  <button className="tracking-tight hover:text-gray757575 transition">파트너 모집 및</button>
-                  <button className="tracking-tight hover:text-gray757575 transition">프로젝트 등록</button>
+                  <button className="tracking-tight hover:text-gray757575 transition leading-5">
+                    파트너 모집 및<br />
+                    프로젝트 등록
+                  </button>
                 </div>
                 <div className="space-y-2 w-full flex flex-col items-start">
                   <button className="tracking-tight hover:text-gray757575 transition">정부 프로젝트 공고</button>
@@ -48,8 +50,8 @@ const Footer = () => {
 
             <div className="flex flex-col items-start">
               {/* Column 2 */}
-              <h3 className="font-bold mb-12">서비스 안내</h3>
-              <div className="flex flex-col items-start font-medium space-y-6 w-full">
+              <h3 className="font-medium mb-12">서비스 안내</h3>
+              <div className="flex flex-col items-start font-normal space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
                   <button className="tracking-tight hover:text-gray757575 transition">연구소 고객 서비스</button>
                   <button className="tracking-tight hover:text-gray757575 transition">기업 고객 서비스</button>
@@ -60,8 +62,8 @@ const Footer = () => {
 
             <div className="flex flex-col items-start">
               {/* Column 3 */}
-              <h3 className="font-bold mb-12">회사</h3>
-              <div className="flex flex-col items-start font-medium space-y-6 w-full">
+              <h3 className="font-medium mb-12">회사</h3>
+              <div className="flex flex-col items-start font-normal space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
                   <button className="tracking-tight hover:text-gray757575 transition">회사 소개</button>
                   <button className="tracking-tight hover:text-gray757575 transition">공지사항</button>
@@ -72,8 +74,8 @@ const Footer = () => {
 
             <div className="flex flex-col items-start">
               {/* Column 4 */}
-              <h3 className="font-bold mb-12">문의</h3>
-              <div className="flex flex-col items-start font-medium space-y-6 w-full">
+              <h3 className="font-medium mb-12">문의</h3>
+              <div className="flex flex-col items-start font-normal space-y-6 w-full">
                 <div className="space-y-2 w-full flex flex-col items-start">
                   <p className="tracking-tight">info@rndcircle.io</p>
                   <p className="tracking-tight">010.6312.6417</p>

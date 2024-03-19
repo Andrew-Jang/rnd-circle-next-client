@@ -64,9 +64,9 @@ export default function Login() {
         </div>
         <div className="w-full flex justify-center mt-6">
           <div className="inline-flex tracking-tight space-x-2">
-            <p className="text-xs text-gray757575 inline font-medium">아직 계정이 없으신가요?</p>
+            <p className="text-xs text-gray757575 inline font-regular">아직 계정이 없으신가요?</p>
             <Link href={"/auth/signup"}>
-              <p className="text-xs text-rndBlue underline font-bold">회원가입하기</p>
+              <p className="text-xs text-rndBlue underline font-regular">회원가입하기</p>
             </Link>
           </div>
         </div>

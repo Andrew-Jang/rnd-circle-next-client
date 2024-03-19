@@ -1,32 +1,14 @@
 import Image from "next/image";
 import Footer from "@/app/components/footer";
 import Menu from "@/app/components/menu";
-import LabTable from "@/app/components/labTable";
+import LabTable from "@/app/(routes)/home/lab/labTable";
 import Header from "@/app/components/header";
-import Link from "next/link";
 import ArticleCard from "./articleCard";
 import ProfileCard from "../profileCard";
 import HomeProjectCard from "../homeProjectCard";
+import MiniCard from "../MiniCard";
 
 export default function Lab() {
-  const MiniCard = ({ icon, text, number, hasNew }) => (
-    <button
-      style={{
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
-        borderRadius: "26.39px",
-        height: "90px",
-      }}
-      className="w-28 h-24 rounded-xl custom-border border-white flex flex-col items-center py-4 hover:brightness-110 transition backdrop-blur"
-    >
-      <div className="relative">
-        <Image src={icon} alt="card1" className="" width={20} height={20} priority />
-        {hasNew && <div className="absolute -top-0.5 -right-1.5 w-1 h-1 rounded-full bg-rndBlue"></div>}
-      </div>
-      <p className="font-montserrat text-xs text-gray757575">{text}</p>
-      <p className="font-montserrat text-xs mt-1.5 font-semibold">{number}</p>
-    </button>
-  );
-
   const WelcomeSection = () => (
     <div
       style={{
@@ -87,9 +69,11 @@ export default function Lab() {
           className="rounded-[13px] 2xl:rounded-[15px] absolute bottom-0 w-[43px] 2xl:w-[50px] hover:opacity-70 cursor-pointer transition"
         ></div>
       </div>
-      <p style={{ fontSize: "10px", color: "#525252" }} className="font-montserrat mt-0.5 2xl:mt-1">
-        {title}
-      </p>
+      <div className="h-3px mt-0.5 2xl:mt-1">
+        <p style={{ color: "#525252" }} className="font-montserrat text-2xs">
+          {title}
+        </p>
+      </div>
     </div>
   );
 
@@ -133,7 +117,7 @@ export default function Lab() {
       }}
       className="w-full h-[16rem] 2xl:h-[17.2rem] rounded-xl custom-border flex flex-col justify-between px-2 2xl:px-3 pt-[1.5rem] 2xl:pt-8 pb-3 transition flex-shrink-0 backdrop-blur"
     >
-      <div className="flex items-center justify-between w-full px-5 2xl:px-5 mb-8">
+      <div className="flex items-center justify-between w-full px-5 2xl:px-5 mb-4 2xl:mb-5">
         <p className="font-montserrat font-medium text-[24px] 2xl:text-[27px] text-left">Visitor metrics</p>
         <div className="flex items-center space-x-2">
           <button className="rounded-full py-1.5 px-4 text-white font-montserrat text-xs font-medium hover:brightness-150 transition bg-rndBlue">
@@ -148,9 +132,9 @@ export default function Lab() {
         </div>
       </div>
       <div
-        style={{ borderRadius: "24px" }}
-        className="w-full h-64 custom-border relative flex items-center px-4 2xl:px-5 justify-between 2xl:pt-2"
-      >
+        style={{ borderRadius: "22px" }}
+        className="w-full custom-border relative flex px-4 2xl:px-5 justify-between pt-2.5 pb-1.5 2xl:pt-3.5 2xl:pb-2.5"
+        >
         <Bar title={"MON"} height={"4rem"} color={"#9397FF"} />
         <Bar title={"TUE"} height={"2rem"} color={"#C7CAFF"} />
         <Bar title={"WED"} height={"3rem"} color={"#6F75FF"} />
@@ -199,7 +183,7 @@ export default function Lab() {
 
       <div className="w-auto max-w-1.5sm 2xl:max-w-xl h-full flex py-[1.5rem] space-x-[1.5rem] 2xl:py-8 2xl:space-x-8 flex-shrink-0">
         <div className="space-y-5">
-          <WavvyCard title1={"Visit"} title2={"Website"} subtitle={"나의 연구실 웹사이트로 이동해보세요"} />
+          <WavvyCard title1={"My Lab"} title2={"Website"} subtitle={"나의 연구실 웹사이트로 이동해보세요"} />
           <WavvyCard title1={"Project"} title2={"Management"} subtitle={"연구실의 프로젝트를 관리하세요"} />
           <HomeProjectCard />
         </div>

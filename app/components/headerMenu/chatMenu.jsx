@@ -17,7 +17,7 @@ const ChatMenu = () => {
             {time}
           </p>
         </div>
-        <p className="text-gray757575 text-2xs">{text}</p>
+        <p className="text-gray757575 text-xs">{text}</p>
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ const ChatMenu = () => {
     {
       key: "3",
       label: (
-        <div className=" w-64 pt-4 pb-3 flex items-center justify-center font-medium text-2xs text-gray757575 tracking-tight border-t font-spoqa">
+        <div className=" w-64 pt-4 pb-3 flex items-center justify-center font-medium text-xs text-gray757575 tracking-tight border-t font-spoqa">
           받은 메시지 전체 보기
         </div>
       ),

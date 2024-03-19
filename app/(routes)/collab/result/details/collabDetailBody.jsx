@@ -1,3 +1,4 @@
+import HashtagCell2 from "@/app/components/hashtagCell2";
 import React from "react";
 
 const CollabDetailBody = ({ item }) => {
@@ -20,12 +21,7 @@ const CollabDetailBody = ({ item }) => {
 
       <div className="flex space-x-2 mt-4">
         {item.tags.map((item) => (
-          <div
-            style={{ borderColor: "#ECECEC" }}
-            className="text-2xs font-medium rounded-full text-gray757575 tracking-tight border px-2 py-1"
-          >
-            {item}
-          </div>
+          <HashtagCell2 item={item} />
         ))}
       </div>
 

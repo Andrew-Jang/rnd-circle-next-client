@@ -18,22 +18,22 @@ const ProfileCard = ({ title, name, desc, address }) => {
         {name}
       </div>
       <div className="text-xs mt-3 text-gray757575">{desc}</div>
-      <div className="text-xs flex items-center space-x-1 mt-1 text-gray757575">
-        <Image src="/pin.png" alt="RnDCircle menu1" className="" width={15} height={15} priority />
+      <div className="text-xs flex items-center space-x-1 mt-2 text-gray757575">
+        <Image src="/pin.png" alt="RnDCircle menu1" className="" width={15} height={15} priority unoptimized />
         <label style={{ height: "14px" }}>{address}</label>
       </div>
-      <div className="space-x-2 flex items-center mt-4">
-        <button className="border px-2 py-1 rounded-full font-montserrat bg-white text-xs flex items-center space-x-2 hover:brightness-125 transition text-gray757575 font-medium">
-          <Image src="/edit.png" alt="RnDCircle menu1" className="object-contain" width={17} height={17} unoptimized />
+      <div className="space-x-1.5 flex items-center mt-4">
+        <button className="border px-3 h-[1.7rem] rounded-full font-montserrat bg-white text-xs flex items-center space-x-1.5 hover:brightness-125 transition text-gray757575 font-medium">
+          <Image src="/edit.png" alt="RnDCircle menu1" className="object-contain" width={14} height={14} unoptimized />
           <p>Edit</p>
         </button>
-        <button className="border px-2 py-1 rounded-full font-montserrat bg-white text-xs flex items-center space-x-2 hover:brightness-125 transition text-gray757575 font-medium">
+        <button className="border px-3 h-[1.7rem] rounded-full font-montserrat bg-white text-xs flex items-center space-x-1.5 hover:brightness-125 transition text-gray757575 font-medium">
           <Image
             src="/setting.png"
             alt="RnDCircle menu1"
             className="object-contain"
-            width={17}
-            height={17}
+            width={14}
+            height={14}
             unoptimized
           />
           <p>Setting</p>

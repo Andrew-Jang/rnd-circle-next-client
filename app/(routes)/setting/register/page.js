@@ -67,12 +67,12 @@ const page = () => {
       {isBig ? (
         <textarea
           placeholder={placeholder}
-          className="bg-white custom-border outline-none min-h-40 p-4 text-xs w-full placeholder-black"
+          className="bg-white custom-border outline-none min-h-40 p-4 text-xs w-full placeholder-gray757575 rounded-xl"
         />
       ) : (
         <input
           placeholder={placeholder}
-          className="bg-white custom-border outline-none min-h-12 px-4 text-xs w-full placeholder-black"
+          className="bg-white custom-border outline-none min-h-12 px-4 text-xs w-full placeholder-gray757575 rounded-xl"
         />
       )}
     </div>

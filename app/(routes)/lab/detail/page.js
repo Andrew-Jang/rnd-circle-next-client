@@ -6,6 +6,7 @@ import ActionButton from "@/app/components/actionButton";
 import BackButton from "@/app/components/backButton";
 import { TEMP } from "./sampleJSON";
 import HashtagCell from "@/app/components/hashtagCell";
+import HashtagCell2 from "@/app/components/hashtagCell2";
 
 export default function Lab() {
   const DetailCard = ({ item }) => (
@@ -45,12 +46,7 @@ export default function Lab() {
               <p className="text-lg  text-left leading-7 font-medium">주요 연구 영역</p>
               <div className="flex flex-wrap gap-2 max-w-2xl mt-6">
                 {item.area.map((item) => (
-                  <div
-                    style={{ backgroundColor: "#FBFBFBE5", color: "#525252" }}
-                    className="rounded-full px-3 py-0.5 border text-2xs font-medium"
-                  >
-                    {item}
-                  </div>
+                  <HashtagCell2 item={item} />
                 ))}
               </div>
             </div>
@@ -60,7 +56,7 @@ export default function Lab() {
               <div className="flex break-keep gap-2 mt-6 text-xs">{item.desc}</div>
             </div>
             <div className="mt-10">
-              <p className="text-lg  text-left leading-7 font-medium">지도교수 정보</p>
+              <p className="text-lg text-left leading-7 font-medium">지도교수 정보</p>
               <div style={{ whiteSpace: "pre-wrap" }} className="flex break-keep gap-2 mt-6 text-xs leading-5">
                 {item.info}
               </div>

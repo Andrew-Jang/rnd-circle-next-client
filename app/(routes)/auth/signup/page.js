@@ -100,7 +100,7 @@ export default function Signup() {
               className="hidden"
             />
             <span className="radio-custom"></span>
-            <p className="ml-2 font-medium ">전체 동의</p>
+            <p className="ml-2">전체 동의</p>
           </label>
         </div>
 
@@ -115,10 +115,10 @@ export default function Signup() {
                 className="hidden"
               />
               <span className="radio-custom"></span>
-              <p className="ml-2 font-medium ">[필수] 알앤디써클 이용약관 동의</p>
+              <p className="ml-2">[필수] 알앤디써클 이용약관 동의</p>
               <div
                 onClick={(e) => e.preventDefault()}
-                className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
+                className="text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
               >
                 약관보기
               </div>
@@ -134,10 +134,10 @@ export default function Signup() {
                 className="hidden"
               />
               <span className="radio-custom"></span>
-              <p className="ml-2 font-medium ">[필수] 알앤디써클 개인정보처리방침 동의</p>
+              <p className="ml-2">[필수] 알앤디써클 개인정보처리방침 동의</p>
               <div
                 onClick={(e) => e.preventDefault()}
-                className="text-2xs font-bold text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
+                className="text-rndBlue opacity-50 hover:opacity-100 transition ml-2"
               >
                 약관보기
               </div>
@@ -213,15 +213,15 @@ export default function Signup() {
         <div className="w-full flex justify-center mt-6">
           <Link href={"/home/lab"}>
             <button className="h-12 px-6 text-xs font-bold rounded-full bg-black text-white hover:brightness-150 transition">
-              로그인
+              회원가입
             </button>
           </Link>
         </div>
         <div className="w-full flex justify-center mt-6">
           <div className="inline-flex tracking-tight space-x-2">
-            <p className="text-xs text-gray757575 inline font-medium">이미 계정이 있으신가요?</p>
+            <p className="text-xs text-gray757575 inline font-regular">이미 계정이 있으신가요?</p>
             <Link href={"/auth/login"}>
-              <p className="text-xs text-rndBlue underline font-bold">로그인하기</p>
+              <p className="text-xs text-rndBlue underline font-regular">로그인하기</p>
             </Link>
           </div>
         </div>

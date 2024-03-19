@@ -26,7 +26,7 @@ const Header = ({ authenticated = true }) => {
             <ProfileMenu />
           </div>
         ) : (
-          <div className="flex -mr-2 -mb-2">
+          <div className="flex -mr-2 -mb-2 space-x-6">
             <Link href={"/auth/login"}>
               <button className="h-12 px-6 text-xs font-bold rounded-full hover:bg-white hover:bg-opacity-50 transition">
                 로그인

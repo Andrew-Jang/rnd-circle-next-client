@@ -1,42 +1,72 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { SENARIO_SAMPLE } from "./sampleJSON";
 import ProjectCard from "@/app/(routes)/project/projectCard";
 import { TEMP_PROJECTS } from "@/app/(routes)/project/detail/government/sampleJSON";
 import NextButton from "@/app/components/nextButton";
 
 const CollabSenario = () => {
-  const Card = ({ item }) => (
-    <div style={{ borderRadius: "26.39px" }} className="w-full p-8 rounded flex custom-border space-x-8">
-      <div style={{ width: "22rem" }} className="flex-shrink-0">
-        <Image src={item.img} className="" alt="Vercel Logo" width={484} height={233} />
-        <div className="mt-5">
-          <p className="text-lg font-medium">{item.title}</p>
-          <p className="text-gray757575 text-xs mt-1 leading-5">{item.subtitle}</p>
+  const Card = ({ item }) => {
+    const [selectedTab, setSelectedTab] = useState(0);
+    return (
+      <div style={{ borderRadius: "26.39px" }} className="w-full p-8 rounded flex custom-border space-x-8">
+        <div style={{ width: "22rem" }} className="flex-shrink-0">
+          <Image src={item.img} className="" alt="Vercel Logo" width={484} height={233} />
+          <div className="mt-5">
+            <p className="text-lg font-medium">{item.title}</p>
+            <p className="text-gray757575 text-xs mt-1 leading-5">{item.subtitle}</p>
+          </div>
         </div>
-      </div>
-      <div className="w-full flex flex-col items-start">
-        <div className={`px-3 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue`}>{item.tag}</div>
-        <p className="mt-4 text-xs break-keep leading-5 text-black">{item.text}</p>
+        <div className="w-full flex flex-col items-start">
+          <div className={`px-3 py-1 rounded-full text-white font-medium text-2xs bg-rndBlue`}>{item.tag}</div>
+          <p className="mt-4 text-xs break-keep leading-5 text-black">{item.text}</p>
 
-        <div className="flex space-x-2 mt-8">
-          <button className="px-3 py-1 rounded-full font-medium bg-black hover:bg-opacity-90 text-white transition flex items-center space-x-1">
-            <Image src="/chart.png" className="object-contain" alt="Vercel Logo" width={14} height={14} unoptimized />
-            <p className="text-xs">보유 기술</p>
-          </button>
-          <button className="px-3 py-1 border-2 rounded-full font-medium hover:bg-gray-100 transition flex items-center space-x-1">
-            <Image src="/data.png" className="object-contain" alt="Vercel Logo" width={14} height={14} unoptimized />
-            <p className=" text-xs">관련 프로젝트 경험 및 논문</p>
-          </button>
-        </div>
-        <div className="text-xs mt-4 leading-5">
-          {item.bullet.map((item) => (
-            <p>• {item}</p>
-          ))}
+          <div className="flex space-x-2 mt-8">
+            <button
+              onClick={() => setSelectedTab(0)}
+              className={`${
+                selectedTab === 0 ? "bg-black text-white border-black" : "hover:bg-opacity-90 "
+              } px-3 py-1 rounded-full font-medium  border transition flex items-center space-x-1`}
+            >
+              <Image
+                style={{ filter: selectedTab === 1 && "brightness(0) invert(0)" }}
+                src="/chart.png"
+                className="object-contain"
+                alt="Vercel Logo"
+                width={14}
+                height={14}
+                unoptimized
+              />
+              <p className="text-xs">보유 기술</p>
+            </button>
+            <button
+              onClick={() => setSelectedTab(1)}
+              className={`${
+                selectedTab === 1 ? "bg-black text-white border-black" : "hover:bg-opacity-90 border"
+              } px-3 py-1 rounded-full font-medium  border transition flex items-center space-x-1`}
+            >
+              <Image
+                style={{ filter: selectedTab === 1 && "brightness(0) invert(1)" }}
+                src="/data.png"
+                className="object-contain"
+                alt="Vercel Logo"
+                width={14}
+                height={14}
+                unoptimized
+              />
+              <p className=" text-xs">관련 프로젝트 경험 및 논문</p>
+            </button>
+          </div>
+          <div className="text-xs mt-4 leading-5">
+            {item.bullet.map((item) => (
+              <p>• {item}</p>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const RelatedProjects = () => (
     <div

@@ -1,7 +1,7 @@
 import Footer from "@/app/components/footer";
 import Menu from "@/app/components/menu";
 import Header from "@/app/components/header";
-import LabTableFull from "@/app/components/labTableFull";
+import LabTableFull from "@/app/(routes)/lab/labTableFull";
 
 export default function Lab() {
   return (

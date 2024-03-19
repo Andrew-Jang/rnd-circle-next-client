@@ -6,7 +6,7 @@ import React from "react";
 const Collab = () => {
   const SAMPLE = ["Computer Vision", "Machine Learning", "Explainable AI"];
   const ResultCircle = () => (
-    <div style={{ height: "calc(100svh - 7rem)" }} className="flex w-full items-center justify-center space-x-40">
+    <div style={{ height: "calc(100svh - 9rem)" }} className="flex w-full items-center justify-center space-x-40">
       <button className="hover:brightness-50 transition">
         <Image src="/double-left.png" className="object-contain" alt="Vercel Logo" width={32} height={32} />
       </button>
@@ -41,17 +41,17 @@ const Collab = () => {
           품질 검사 시스템 고도화, 스마트 물류 등의 영역에서 연구를 진행합니다.
         </p>
 
-        <button className="px-3 py-1 border-2 rounded-full font-medium mt-8 hover:bg-gray-100 transition flex items-center space-x-1">
+        <div className="px-3 py-1 border-2 rounded-full font-medium mt-8 flex items-center space-x-1 bg-[#FBFBFB] bg-opacity-90 cursor-default">
           <Image src="/data.png" className="object-contain" alt="Vercel Logo" width={14} height={14} />
           <p className="text-xs">가상 협력 시나리오</p>
-        </button>
+        </div>
         <div className="mt-6 flex flex-col items-center space-y-2">
           <p className="font-medium text-base tracking-tight">AI 기반 품질 검사 시스템 개선</p>
           <p className="font-medium text-base tracking-tight">스마트 물류 및 자동화 처리</p>
           <p className="font-medium text-base tracking-tight">AI 주도 안전 및 감시 분석</p>
         </div>
         <Link href={"/collab/result/details"}>
-          <button className="px-6 py-3 border-2 rounded-full font-bold text-sm mt-8 hover:bg-gray-100 transition">
+          <button className="px-6 py-3 border-2 rounded-full font-medium text-sm mt-8 hover:bg-gray-100 transition bg-[#FBFBFB] bg-opacity-90">
             <p>자세히 알아보기</p>
           </button>
         </Link>

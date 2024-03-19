@@ -30,14 +30,14 @@ const ActionButton = ({ icon, title }) => {
         style={{
           borderRadius: "26.39px",
         }}
-        className="custom-border h-16 w-16 bg-white hover:bg-gray-100 transition space-y-1 flex flex-col items-center justify-center backdrop-blur"
+        className="custom-border h-[4.2rem] w-[4.6rem] bg-white hover:bg-gray-100 transition space-y-1.5 flex flex-col items-center justify-center backdrop-blur"
         onClick={(e) => {
           title === "메세지" && showModal();
           e.preventDefault();
         }}
       >
         <Image src={icon} alt="Vercel Logo" className="" width={16} height={16} unoptimized />
-        <p className="text-2xs font-medium">{title}</p>
+        <p className="text-xs font-medium">{title}</p>
       </button>
     </>
   );

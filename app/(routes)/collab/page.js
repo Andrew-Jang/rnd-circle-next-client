@@ -24,7 +24,7 @@ const Collab = () => {
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         maxWidth: "1920px",
-        height: "calc(100svh - 7rem)",
+        height: "calc(100svh - 9rem)",
       }}
       className="w-full flex justify-center relative"
     >
@@ -33,17 +33,17 @@ const Collab = () => {
           <BackButton path={"/home/lab"} />
         </div>
         <div className="mt-20 flex flex-col items-center">
-          <h1 className="font-montserrat text-left text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl leading-tight font-medium text-gray757575">
+          <h1 className="font-montserrat text-left text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl leading-tight font-normal">
             맞춤형 R&D 파트너 확인하기
           </h1>
-          <h2 className="text-xs md:text-sm 2xl:text-lg font-medium  text-center mt-6">
+          <h2 className="text-xs md:text-sm 2xl:text-lg font-medium text-center mt-6 text-gray757575">
             최적의 R&D 파트너를 발견하고,
             <br />
             AI가 제공하는 다양한 협업 시나리오를 통해 가능성을 탐색해보세요
           </h2>
           <button
             onClick={() => setPartnerCheck(true)}
-            className="px-6 py-4 text-white bg-rndBlue rounded-full font-bold text-sm mt-8 hover:brightness-150 transition flex items-center space-x-2"
+            className="px-6 py-4 text-white bg-rndBlue rounded-full font-medium text-sm mt-8 hover:brightness-150 transition flex items-center space-x-2"
           >
             <Image src="/target.png" alt="Vercel Logo" className="object-contain" width={20} height={20} unoptimized />
             <p>확인하기</p>
@@ -60,7 +60,7 @@ const Collab = () => {
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         maxWidth: "1920px",
-        height: "calc(100svh - 7rem)",
+        height: "calc(100svh - 9rem)",
       }}
       className="w-full flex justify-center relative"
     >
@@ -74,7 +74,7 @@ const Collab = () => {
           <h1 className="font-montserrat text-left text-xl md:text-xl lg:text-2xl 2xl:text-3xl leading-tight font-medium">
             생성 중...
           </h1>
-          <h2 className="text-sm font-medium text-center mt-6 text-gray757575 leading-6">
+          <h2 className="text-sm font-normal text-center mt-6 text-gray757575 leading-6">
             *해당 서비스는 가상의 상황을 기반으로 한 협력 시나리오를 제공합니다.
             <br />
             이는 실제 협력을 의미하거나 대체할 수 없으며, 현실적인 동의나 계약 없이 작성된 가상의 내용입니다.
@@ -83,7 +83,7 @@ const Collab = () => {
           </h2>
           <button
             onClick={() => setPartnerCheck(false)}
-            className="px-6 py-2 border-2 text-gray757575 rounded-full font-bold text-sm mt-8 hover:bg-gray-100 transition"
+            className="px-6 py-2 border-2 text-gray757575 rounded-full font-medium text-sm mt-8 hover:bg-gray-100 transition"
           >
             <p>취소하기</p>
           </button>
