@@ -15,7 +15,7 @@ const Collab = () => {
         router.push("/collab/result");
       }, 5000);
     }
-  }, [isPartnerCheck]);
+  }, [isPartnerCheck, router]);
 
   const StartSection = () => (
     <div

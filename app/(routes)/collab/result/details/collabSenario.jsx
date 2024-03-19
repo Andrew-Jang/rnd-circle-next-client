@@ -59,8 +59,8 @@ const CollabSenario = () => {
             </button>
           </div>
           <div className="text-xs mt-4 leading-5">
-            {item.bullet.map((item) => (
-              <p>• {item}</p>
+            {item.bullet.map((item, index) => (
+              <p key={index}>• {item}</p>
             ))}
           </div>
         </div>
@@ -85,8 +85,8 @@ const CollabSenario = () => {
         </p>
 
         <div className="w-full flex space-x-4 mt-8 items-center">
-          {TEMP_PROJECTS.map((item) => (
-            <ProjectCard item={item} />
+          {TEMP_PROJECTS.map((item, index) => (
+            <ProjectCard key={index} item={item} />
           ))}
           <NextButton />
         </div>
@@ -116,8 +116,8 @@ const CollabSenario = () => {
         </p>
 
         <div className="w-full mt-8 flex flex-col space-y-6 mb-24">
-          {SENARIO_SAMPLE.map((item) => (
-            <Card item={item} />
+          {SENARIO_SAMPLE.map((item, index) => (
+            <Card key={index} item={item} />
           ))}
         </div>
 

@@ -58,7 +58,7 @@ const TableCell = ({ item }) => {
                 style={{
                   borderRadius: "26.39px",
                 }}
-                className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
+                className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition"
               >
                 <Image src="/open.png" alt="Vercel Logo" className="" width={18} height={18} />
               </button>
@@ -73,7 +73,7 @@ const TableCell = ({ item }) => {
                 showModal();
                 e.preventDefault();
               }}
-              className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition backdrop-blur"
+              className="custom-border h-10 w-12 flex items-center justify-center bg-white hover:bg-gray-200 transition"
             >
               <Image src="/chat.png" alt="Vercel Logo" className="" width={18} height={18} />
             </button>

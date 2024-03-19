@@ -45,8 +45,8 @@ export default function Lab() {
             <div className="mt-16">
               <p className="text-lg  text-left leading-7 font-medium">주요 연구 영역</p>
               <div className="flex flex-wrap gap-2 max-w-2xl mt-6">
-                {item.area.map((item) => (
-                  <HashtagCell2 item={item} />
+                {item.area.map((item, index) => (
+                  <HashtagCell2 key={index} item={item} />
                 ))}
               </div>
             </div>

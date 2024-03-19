@@ -32,7 +32,9 @@ const Collab = () => {
 
         <div className="flex space-x-2 items-center mt-6">
           {SAMPLE.map((item, index) => (
-            <div className={`px-3 py-1 rounded-full text-white font-medium text-xs bg-rndBlue`}>{item}</div>
+            <div key={index} className={`px-3 py-1 rounded-full text-white font-medium text-xs bg-rndBlue`}>
+              {item}
+            </div>
           ))}
         </div>
         <p className="text-sm tracking-tight mt-6 text-center">

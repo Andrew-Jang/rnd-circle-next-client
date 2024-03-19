@@ -57,8 +57,8 @@ export default function ProjectDetail() {
         </p>
 
         <div className="w-full flex space-x-4 mt-8 items-center">
-          {TEMP_PROJECTS.map((item) => (
-            <ProjectCard item={item} />
+          {TEMP_PROJECTS.map((item, index) => (
+            <ProjectCard key={index} item={item} />
           ))}
           <NextButton />
         </div>

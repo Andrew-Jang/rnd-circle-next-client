@@ -20,8 +20,8 @@ const CollabDetailBody = ({ item }) => {
       ))}
 
       <div className="flex space-x-2 mt-4">
-        {item.tags.map((item) => (
-          <HashtagCell2 item={item} />
+        {item.tags.map((item, index) => (
+          <HashtagCell2 key={index} item={item} />
         ))}
       </div>
 

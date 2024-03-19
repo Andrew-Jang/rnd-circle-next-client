@@ -323,12 +323,12 @@ const ProjectTable = () => {
   const TableBody = () => (
     <div style={{ borderTopWidth: 0 }} className="custom-border w-full rounded-b-3xl p-8 gap-6 grid grid-cols-2">
       {currentTab === "정부"
-        ? [...TEMP, ...TEMP].map((item) => <ProjectCard item={item} />)
+        ? [...TEMP, ...TEMP].map((item, index) => <ProjectCard key={index} item={item} />)
         : currentTab === "기업"
-        ? [...TEMP2, ...TEMP2].map((item) => <ProjectCard item={item} />)
+        ? [...TEMP2, ...TEMP2].map((item, index) => <ProjectCard key={index} item={item} />)
         : currentTab === "연구실"
-        ? [...TEMP3, ...TEMP3].map((item) => <ProjectCard item={item} />)
-        : [...TEMP4, ...TEMP4].map((item) => <ProjectCard item={item} />)}
+        ? [...TEMP3, ...TEMP3].map((item, index) => <ProjectCard key={index} item={item} />)
+        : [...TEMP4, ...TEMP4].map((item, index) => <ProjectCard key={index} item={item} />)}
     </div>
   );
 

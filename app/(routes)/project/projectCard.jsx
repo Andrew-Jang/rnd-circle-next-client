@@ -17,7 +17,7 @@ const ProjectCard = ({ item }) => {
       <button className="rounded-3xl custom-border w-full flex flex-col items-start p-7 hover:bg-gray-100 transition">
         <div className="flex flex-wrap gap-2">
           {item.countdown.map((item, index) => (
-            <HashtagCell item={item} index={index} />
+            <HashtagCell key={index} item={item} index={index} />
           ))}
         </div>
         <p className="text-left leading-7 font-bold mt-3 ">{item.title}</p>
@@ -33,8 +33,9 @@ const ProjectCard = ({ item }) => {
           </div>
         )}
         <div className="flex flex-wrap mt-4 gap-2">
-          {item.tags.map((item) => (
+          {item.tags.map((item, index) => (
             <div
+              key={index}
               style={{
                 backgroundColor: item === "접수예정" ? "#CECECE" : "#ffffff",
                 color: item === "접수예정" ? "#ffffff" : "#525252",

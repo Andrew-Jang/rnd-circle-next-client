@@ -265,3 +265,31 @@ body {
   border-width: 1.5px;
   border-color: #ececec;
 }
+
+.filter-dropdown .ant-dropdown-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.ant-dropdown-menu::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+
+}
+
+/* Track (background of the scrollbar) */
+.ant-dropdown-menu::-webkit-scrollbar-track {
+  background: #fff; /* Light background */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle (the draggable scrolling element) */
+.ant-dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.24); /* Darker color for contrast */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Handle on hover */
+.ant-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5); /* Slightly darker on hover for feedback */
+}

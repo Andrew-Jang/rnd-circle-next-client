@@ -9,7 +9,7 @@ const CollabDetailHeader = ({ item }) => {
         <div className="space-y-4 flex flex-col items-start w-full">
           <div className="flex space-x-2 items-center">
             {item.category.map((item, index) => (
-              <HashtagCell item={item} index={index} />
+              <HashtagCell key={index} item={item} index={index} />
             ))}
           </div>
           <p className="text-3xl text-left leading-7 font-medium ">{item.title}</p>
